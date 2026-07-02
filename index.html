@@ -10,16 +10,24 @@
 <meta property="og:type" content="article">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --cream:#f5f1e8; --ink:#2b2620; --ink-soft:#5b5348; --terra:#b25533; --terra-dark:#8f4226;
-  --line:#ddd5c6; --card:#fdfbf6; --gold:#c9a227;
-  --serif:'Spectral',Georgia,serif; --sans:'Hanken Grotesk',-apple-system,sans-serif;
+  /* First Presbyterian Church of Atlanta palette */
+  --cream:#ffffff; --ink:#141414; --ink-soft:#5a5a5a; --terra:#ef432f; --terra-dark:#c23222;
+  --line:#e4e4e4; --card:#f7f7f7; --gold:#ef432f;
+  --serif:'Spectral',Georgia,serif; --sans:'Poppins',-apple-system,sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{background:var(--cream);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.65}
+/* ---------- top band (FPC header) ---------- */
+.topband{background:#000;color:#fff;font-family:var(--sans);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:center;gap:12px;padding:10px 24px}
+.topband svg{width:20px;height:20px;flex:none}
+.topband strong{font-weight:600}
+.topband a{color:#fff;opacity:.75;text-decoration:none;margin-left:auto;letter-spacing:.06em}
+.topband a:hover{opacity:1}
+@media print{.topband{display:none}}
 .layout{display:grid;grid-template-columns:250px minmax(0,1fr);max-width:1140px;margin:0 auto;gap:0 48px;padding:0 24px}
 /* ---------- sidebar ---------- */
 .toc{position:sticky;top:0;align-self:start;height:100vh;overflow-y:auto;padding:40px 0 40px 4px;font-family:var(--sans);font-size:13.5px;scrollbar-width:thin}
@@ -55,7 +63,7 @@ em{font-style:italic}
 .note{background:var(--card);border-left:3px solid var(--terra);border-radius:0 10px 10px 0;padding:14px 18px;margin:24px 0;font-size:16px;line-height:1.55}
 .note .lab{font-family:var(--sans);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.13em;color:var(--terra);display:block;margin-bottom:5px}
 .pull{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:30px 0;padding:20px 6px;font-size:22px;line-height:1.45;font-style:italic;color:var(--terra-dark);text-align:center}
-.videowrap{position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;background:#1d1a15;margin:24px 0 8px}
+.videowrap{position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;background:#0a0a0a;margin:24px 0 8px}
 .videowrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .vcap{font-family:var(--sans);font-size:13px;color:var(--ink-soft);margin-bottom:24px}
 .gl{border-bottom:1px dotted var(--terra);cursor:help;position:relative}
@@ -95,7 +103,7 @@ dl.gloss dd{margin-left:0;font-size:16.5px;color:var(--ink-soft)}
 .refs h3{font-size:17px;margin-top:26px}
 .refs ol{margin-left:22px}
 .refs li{margin-bottom:10px;scroll-margin-top:24px}
-.refs li:target{background:#fbf3df;border-radius:6px;padding:4px 8px;margin-left:-8px}
+.refs li:target{background:#fdeae7;border-radius:6px;padding:4px 8px;margin-left:-8px}
 a.cite{color:inherit;text-decoration:none;border-bottom:1px dotted rgba(178,85,51,.55)}
 a.cite:hover{color:var(--terra-dark);border-bottom-color:var(--terra-dark);border-bottom-style:solid}
 .refgroup{font-family:var(--sans)}
@@ -126,11 +134,16 @@ footer{border-top:1px solid var(--line);margin-top:70px;padding-top:20px;font-fa
 </style>
 </head>
 <body>
+<div class="topband">
+  <svg viewBox="0 0 38 38" aria-hidden="true"><path d="M19 1 Q19 19 33 19 Q19 19 19 37 Q19 19 5 19 Q19 19 19 1 Z" fill="var(--terra)"/></svg>
+  <span><strong>First Presbyterian Church of Atlanta</strong> · The Epiphany Program</span>
+  <a href="https://www.firstpresatl.org/epiphany">firstpresatl.org/epiphany</a>
+</div>
 <div class="layout">
 
 <nav class="toc" aria-label="Contents">
   <div class="mark">
-    <svg viewBox="0 0 38 38" aria-hidden="true"><path d="M19 1 Q19 19 33 19 Q19 19 19 37 Q19 19 5 19 Q19 19 19 1 Z" fill="var(--terra)"/><path d="M29.5 4.5 Q29.5 8.5 33.5 8.5 Q29.5 8.5 29.5 12.5 Q29.5 8.5 25.5 8.5 Q29.5 8.5 29.5 4.5 Z" fill="var(--gold)"/></svg>
+    <svg viewBox="0 0 38 38" aria-hidden="true"><path d="M19 1 Q19 19 33 19 Q19 19 19 37 Q19 19 5 19 Q19 19 19 1 Z" fill="var(--terra)"/><path d="M29.5 4.5 Q29.5 8.5 33.5 8.5 Q29.5 8.5 29.5 12.5 Q29.5 8.5 25.5 8.5 Q29.5 8.5 29.5 4.5 Z" fill="var(--ink)"/></svg>
     <div><strong>The Epiphany Guide</strong><span>to social enterprise</span></div>
   </div>
   <h4>The guide</h4>
