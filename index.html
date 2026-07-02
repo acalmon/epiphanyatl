@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Epiphany Guide to Social Enterprise · First Presbyterian Church of Atlanta</title>
+<meta name="description" content="A field guide for volunteers of the Epiphany program at First Presbyterian Church of Atlanta: what a social enterprise is, why it is hard to run, and how to judge one before recommending a grant.">
+<meta property="og:title" content="The Epiphany Guide to Social Enterprise">
+<meta property="og:description" content="What a social enterprise is, why it is hard to run, and how to judge one before recommending a grant. A field guide for Epiphany volunteers.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#f5f1e8; --ink:#2b2620; --ink-soft:#5b5348; --terra:#b25533; --terra-dark:#8f4226;
+  --line:#ddd5c6; --card:#fdfbf6; --gold:#c9a227;
+  --serif:'Spectral',Georgia,serif; --sans:'Hanken Grotesk',-apple-system,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.65}
+.layout{display:grid;grid-template-columns:250px minmax(0,1fr);max-width:1140px;margin:0 auto;gap:0 48px;padding:0 24px}
+/* ---------- sidebar ---------- */
+.toc{position:sticky;top:0;align-self:start;height:100vh;overflow-y:auto;padding:40px 0 40px 4px;font-family:var(--sans);font-size:13.5px;scrollbar-width:thin}
+.toc .mark{display:flex;align-items:center;gap:10px;margin-bottom:26px}
+.toc .mark svg{width:34px;height:34px;flex:none}
+.toc .mark strong{font-size:15px;letter-spacing:.02em}
+.toc .mark span{display:block;color:var(--ink-soft);font-size:12px}
+.toc h4{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-soft);margin:20px 0 8px}
+.toc a{display:block;color:var(--ink);text-decoration:none;padding:4px 8px;border-radius:6px;line-height:1.35}
+.toc a:hover{background:rgba(178,85,51,.09)}
+.toc a .n{color:var(--terra);font-weight:600;margin-right:6px}
+.toc .star{color:var(--gold);font-size:11px;margin-left:4px}
+.pathnote{margin-top:18px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:12.5px;color:var(--ink-soft);line-height:1.5}
+.pathnote b{color:var(--terra-dark)}
+/* ---------- main ---------- */
+main{padding:56px 0 80px;max-width:700px}
+.kicker{font-family:var(--sans);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.16em;color:var(--terra);margin-bottom:10px}
+.hero h1{font-size:44px;line-height:1.12;font-weight:700;letter-spacing:-.01em}
+.hero .dek{font-size:21px;line-height:1.5;color:var(--ink-soft);margin:18px 0 8px;font-style:italic}
+.hero .meta{font-family:var(--sans);font-size:13.5px;color:var(--ink-soft);margin-top:14px}
+.pathbar{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 6px;font-family:var(--sans)}
+.pathbar .chip{font-size:12.5px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:5px 12px;color:var(--ink-soft)}
+.pathbar .chip.hot{border-color:var(--terra);color:var(--terra-dark);font-weight:600}
+section{margin-top:64px}
+.secnum{font-family:var(--sans);font-size:13px;font-weight:700;color:var(--terra);letter-spacing:.1em}
+h2{font-size:30px;line-height:1.2;font-weight:700;margin:6px 0 6px}
+.rt{font-family:var(--sans);font-size:12.5px;color:var(--ink-soft);margin-bottom:18px}
+h3{font-size:21px;font-weight:600;margin:30px 0 10px}
+p{margin:0 0 18px}
+p+h3{margin-top:34px}
+a{color:var(--terra-dark);text-decoration-thickness:1px;text-underline-offset:2px}
+em{font-style:italic}
+.note{background:var(--card);border-left:3px solid var(--terra);border-radius:0 10px 10px 0;padding:14px 18px;margin:24px 0;font-size:16px;line-height:1.55}
+.note .lab{font-family:var(--sans);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.13em;color:var(--terra);display:block;margin-bottom:5px}
+.pull{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:30px 0;padding:20px 6px;font-size:22px;line-height:1.45;font-style:italic;color:var(--terra-dark);text-align:center}
+.videowrap{position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;background:#1d1a15;margin:24px 0 8px}
+.videowrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vcap{font-family:var(--sans);font-size:13px;color:var(--ink-soft);margin-bottom:24px}
+.gl{border-bottom:1px dotted var(--terra);cursor:help;position:relative}
+.gl:hover::after{content:attr(data-def);position:absolute;left:0;top:calc(100% + 6px);z-index:50;width:280px;background:var(--ink);color:var(--cream);font-family:var(--sans);font-size:13px;line-height:1.45;padding:10px 12px;border-radius:8px;box-shadow:0 6px 24px rgba(0,0,0,.18)}
+/* screen cards */
+.screen{counter-reset:sq;margin:26px 0}
+.sq{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px 14px;margin-bottom:14px}
+.sq h4{font-family:var(--sans);font-size:15.5px;font-weight:700;margin-bottom:8px}
+.sq h4::before{counter-increment:sq;content:counter(sq);display:inline-flex;width:24px;height:24px;border-radius:50%;background:var(--terra);color:var(--cream);align-items:center;justify-content:center;font-size:13px;margin-right:10px;vertical-align:-4px}
+.sq p{font-size:16px;margin-bottom:8px}
+.sq .bl{font-family:var(--sans);font-size:13px;font-weight:600;color:var(--terra-dark)}
+/* exercise grid */
+.ex{display:grid;grid-template-columns:1fr 1fr;gap:2px 30px;margin:22px 0}
+.ex p{font-size:16px;margin-bottom:14px}
+.ex em{font-style:normal;font-weight:700;font-family:var(--sans);font-size:14px;color:var(--terra-dark)}
+/* criteria box */
+.crit{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin:24px 0;font-size:16px}
+.crit b{font-family:var(--sans);font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--terra)}
+/* appendix */
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:12px;padding:0}
+details summary{cursor:pointer;padding:16px 20px;font-family:var(--sans);font-weight:600;font-size:15.5px;list-style:none;display:flex;gap:10px;align-items:baseline}
+details summary::before{content:'▸';color:var(--terra);transition:transform .15s;flex:none}
+details[open] summary::before{transform:rotate(90deg)}
+details summary .an{color:var(--terra);font-weight:700;flex:none}
+details .body{padding:0 22px 18px;font-size:16.5px}
+/* cases */
+.case{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin-bottom:16px}
+.case .tag{font-family:var(--sans);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--terra);display:block;margin-bottom:6px}
+.case h3{margin:0 0 8px;font-size:20px}
+.case p{font-size:16px;margin-bottom:10px}
+.case .links{font-family:var(--sans);font-size:13.5px}
+.case .links a{margin-right:14px}
+/* glossary + refs */
+dl.gloss dt{font-weight:700;margin-top:14px}
+dl.gloss dd{margin-left:0;font-size:16.5px;color:var(--ink-soft)}
+.refs{font-size:15px;line-height:1.55}
+.refs h3{font-size:17px;margin-top:26px}
+.refs ol{margin-left:22px}
+.refs li{margin-bottom:10px;scroll-margin-top:24px}
+.refs li:target{background:#fbf3df;border-radius:6px;padding:4px 8px;margin-left:-8px}
+a.cite{color:inherit;text-decoration:none;border-bottom:1px dotted rgba(178,85,51,.55)}
+a.cite:hover{color:var(--terra-dark);border-bottom-color:var(--terra-dark);border-bottom-style:solid}
+.refgroup{font-family:var(--sans)}
+.readpath li{margin-bottom:14px}
+.readpath{margin-left:22px;font-size:16.5px}
+footer{border-top:1px solid var(--line);margin-top:70px;padding-top:20px;font-family:var(--sans);font-size:13px;color:var(--ink-soft);line-height:1.6}
+.divider{margin:56px 0 0;border:0;border-top:1px solid var(--line)}
+.editnote{background:#fbf3df;border:1px solid #e8d9ae;border-radius:8px;padding:10px 14px;font-family:var(--sans);font-size:13.5px;color:#6b5a22;margin:18px 0}
+/* ---------- responsive ---------- */
+@media (max-width:920px){
+  .layout{display:block;padding:0 20px}
+  .toc{position:static;height:auto;border-bottom:1px solid var(--line);padding:24px 0 16px}
+  .toc .cols{columns:2;column-gap:24px}
+  main{padding-top:36px}
+  .hero h1{font-size:34px}
+  .ex{grid-template-columns:1fr}
+}
+/* ---------- print ---------- */
+@media print{
+  body{background:#fff;font-size:11.5pt}
+  .toc,.videowrap,.pathbar{display:none}
+  main{max-width:none;padding:0}
+  .note,.sq,.case,details{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+  details{border:none}
+  details .body{padding:0}
+}
+</style>
+</head>
+<body>
+<div class="layout">
+
+<nav class="toc" aria-label="Contents">
+  <div class="mark">
+    <svg viewBox="0 0 38 38" aria-hidden="true"><path d="M19 1 Q19 19 33 19 Q19 19 19 37 Q19 19 5 19 Q19 19 19 1 Z" fill="var(--terra)"/><path d="M29.5 4.5 Q29.5 8.5 33.5 8.5 Q29.5 8.5 29.5 12.5 Q29.5 8.5 25.5 8.5 Q29.5 8.5 29.5 4.5 Z" fill="var(--gold)"/></svg>
+    <div><strong>The Epiphany Guide</strong><span>to social enterprise</span></div>
+  </div>
+  <h4>The guide</h4>
+  <div class="cols">
+  <a href="#s1"><span class="n">1</span>The red truck<span class="star" title="15-minute path">★</span></a>
+  <a href="#s2"><span class="n">2</span>What a social enterprise is<span class="star" title="15-minute path">★</span></a>
+  <a href="#s3"><span class="n">3</span>Why it is hard</a>
+  <a href="#s4"><span class="n">4</span>What the evidence shows</a>
+  <a href="#s5"><span class="n">5</span>What helps ventures succeed</a>
+  <a href="#s6"><span class="n">6</span>Grants, and money with a mission</a>
+  <a href="#s7"><span class="n">7</span>The six-question screen<span class="star" title="15-minute path">★</span></a>
+  <a href="#s8"><span class="n">8</span>Practice on Refuge Coffee</a>
+  <a href="#s9"><span class="n">9</span>Serious but fragile</a>
+  </div>
+  <h4>Go deeper</h4>
+  <div class="cols">
+  <a href="#appendix">Appendix A1–A9</a>
+  <a href="#cases">Cases &amp; local studies</a>
+  <a href="#watch">Watch library</a>
+  <a href="#reading">Reading path</a>
+  <a href="#glossary">Glossary</a>
+  <a href="#refs">References</a>
+  </div>
+  <div class="pathnote"><b>Short on time?</b> Before your first meeting: read sections 1, 2, and 7 and watch the four-minute film in section 1. About fifteen minutes. Starred ★ above.</div>
+</nav>
+
+<main>
+
+<header class="hero">
+  <div class="kicker">For the volunteers of the Epiphany program · First Presbyterian Church of Atlanta</div>
+  <h1>The Epiphany Guide to Social&nbsp;Enterprise</h1>
+  <p class="dek">What a social enterprise is, why it is hard to run, and how to judge one wisely before recommending real money.</p>
+  <div class="pathbar">
+    <span class="chip hot">★ 15-minute path: §1 · §2 · §7 + the film</span>
+    <span class="chip">Full guide ≈ 35 min</span>
+    <span class="chip">Appendix &amp; sources, as needed</span>
+  </div>
+  <p class="meta">Prepared for Epiphany navigators, screeners, judges, and donors · Updated July 2026</p>
+</header>
+
+<section id="s1">
+  <div class="secnum">SECTION 1</div>
+  <h2>The red truck</h2>
+  <div class="rt">7 min read · plus a 4-minute film</div>
+
+  <p>In 2015, Kitti Murray bought a 1986 UPS delivery truck for $3,000, painted it red, outfitted it with an espresso machine, and parked it beside a disused service station at the corner of Market Street and East Ponce de Leon in Clarkston, Georgia. Murray was a freelance writer; her husband Bill was a pastor. Two years earlier they had moved to Clarkston, a town of about 13,000 that three decades of refugee resettlement had turned into what journalists like to call the most diverse square mile in America. More than half its residents were born in another country; the high school has counted students from more than fifty of them.</p>
+
+  <p>Murray had noticed two things about her new town. Newly arrived refugees badly needed first jobs, the kind that teach the unwritten rules of American work while paying a living wage. And Clarkston had nowhere to sit down over a decent cup of coffee. The red truck was her answer to both problems at once, and that <em>at once</em> is the whole idea this guide exists to explain. At Refuge Coffee Co., the coffee business is the program, not a fundraiser bolted onto a charity: every latte pays for the job training, and every shift delivers it. Since 2015 Refuge has trained 55 baristas from eighteen countries, keeps 10 to 15 trainees in paid full-time positions for a year or more each, and has grown from the truck to shops in Clarkston, Norcross, and Midtown, at 1280 Peachtree Street, steps from First Presbyterian's front doors.</p>
+
+  <div class="videowrap"><iframe loading="lazy" src="https://player.pbs.org/viralplayer/secret-atlanta-refuge-coffee-company/" allowfullscreen title="PBS Secret Atlanta: Refuge Coffee Company"></iframe></div>
+  <p class="vcap">Watch first: Refuge Coffee Co. on PBS's <em>Secret Atlanta</em> (3:58). Everything in this guide is easier to follow with this venture in mind.</p>
+
+  <h3>Where Epiphany comes in</h3>
+
+  <p>Refuge Coffee is not a case study borrowed from a textbook. When the company needed to grow, First Presbyterian's Epiphany grant jump-started the fundraising; the church's own <em><a class="cite" href="#ref-focalpoint">Focal Point</a></em> told that story in 2019, with members gathered around Murray to brainstorm funds for air conditioning, a bathroom renovation, and a second truck.</p>
+
+  <p>Epiphany itself began the way many good church ideas do: a member noticed something. Ellen Adair Wyche had seen what a Houston congregation was doing with social entrepreneurship and asked why Atlanta's First Presbyterian couldn't do the same. After a period of discernment starting in 2017, the program launched in the fall of 2018 and promptly received 88 applications. Twenty-two became finalists. Church members with business experience, whom the program calls <em>navigators</em>, coached them through business planning; in February 2019 the finalists pitched a panel of judges, and five ventures received the first grants, among them PadSplit's home-sharing model for affordable housing, an automotive training center, an eviction-defense app, a senior-meals venture, and a coffee company in Clarkston.</p>
+
+  <p>Even the seed money had a story: a film crew had paid the church $72,000 to use the sanctuary as a location, a donor added $30,000, and the congregation gave $150,000 more. To date, Epiphany grants have totaled $455,000, and the alumni list runs from Peace of Thread to MicroLife to Special Kneads &amp; Treats.</p>
+
+  <p>The program describes itself as an incubator and accelerator "for entrepreneurs with innovative ideas to address social challenges," and runs in cycles that begin each fall. Applicants do not need to be Christian; proposals should further love, community, transformation, and servant leadership. Volunteers serve in three main ways: the <em>screening team</em> reads applications against the program's criteria, <em>navigators</em> mentor finalists through the coaching period, and <em>judges</em> hear the final pitches. Donors make the pool possible. Whatever your role, the job underneath is the same, and it is the reason for this guide.</p>
+
+  <h3>Why this guide exists</h3>
+
+  <p>A volunteer reading an application needs two postures at the same time: sympathy enough to take a young venture seriously, and scrutiny enough to take real money seriously. The season the program is named for is about recognition, the moment of seeing clearly what has been in front of you all along, and recognition is a fair description of the volunteer's craft: learning to see which ventures are what they appear to be.</p>
+
+  <p>What follows is the shortest honest tour we could write of a field that business schools have now studied for forty years: what a social enterprise actually is (section 2), why running one is structurally hard (3), what rigorous evidence says about what works (4 and 5), how to think about grants and impact investing (6), and a practical six-question screen you can apply to any application (7), with a chance to practice on Refuge Coffee (8). Citations link to the reference list; the appendix carries the scholarly depth. You can be useful having read only sections 1, 2, and 7. The rest will be there when a hard case sends you looking.</p>
+
+  <div class="note"><span class="lab">The posture</span>Generous and careful at the same time. The hard questions come before the check, precisely because we intend to write it.</div>
+</section>
+
+<section id="s2">
+  <div class="secnum">SECTION 2</div>
+  <h2>What a social enterprise is, and what it is not</h2>
+  <div class="rt">6 min read</div>
+
+  <p>The term has a history worth thirty seconds. Bill Drayton founded <a class="cite" href="#ref-ashoka">Ashoka</a> in 1980 to find and fund what he called social entrepreneurs, and spent the next decades making the label famous. Muhammad Yunus and Grameen Bank shared the <a class="cite" href="#ref-nobel2006">2006 Nobel Peace Prize</a> for microcredit, the field's first global celebrity idea. And in 1998 a Stanford (later Duke) professor named <a class="cite" href="#ref-dees1998">J. Gregory Dees</a> wrote the essay that still anchors the definition, describing social entrepreneurs as change agents in the social sector, and warning, in a caveat usually dropped by people quoting him, that his definition was an ideal to aim at, not a description of any real organization.</p>
+
+  <p>Scholars have argued about the boundary ever since; the argument matters because where you draw the line decides what you fund. This guide uses the broad, workable consensus: a social enterprise leads with an explicit social or environmental mission, pursues it through a real business model, and works toward paying its own way instead of depending permanently on donations (<a class="cite" href="#ref-mair2006">Mair &amp; Marti</a>; <a class="cite" href="#ref-santos2012">Santos</a>). One respected camp sets a much higher bar. <a class="cite" href="#ref-martin2007">Martin and Osberg</a> would reserve the term for ventures that transform an unjust equilibrium into a stable better one, which would exclude much of what any local program funds. Know the strict bar exists; apply the broad one.</p>
+
+  <p>For Epiphany's purposes a single sentence does the work. <strong>A social enterprise earns enough to keep running, solves a clearly defined social or environmental problem, and builds protection for the mission into who decides what.</strong> The last clause is easy to skip and shouldn't be: a mission that lives only in a founder's heart has no protection when the founder gets tired, or bought out, or wrong.</p>
+
+  <p>These organizations sit on a spectrum. At one end, the wholly grant-funded nonprofit. Then the nonprofit that earns part of its budget by selling something (the field calls this <span class="gl" data-def="Earning revenue by selling goods or services, rather than relying on donations.">trading</span>). Further along, Yunus's "social business," where investors may recover their principal but never take a dividend. At the far end, the for-profit company with a mission wired into its operations. Refuge Coffee, a 501(c)(3) whose business activity is the program, sits in the productive middle. The model even has its own name in the research: a <span class="gl" data-def="Work-integration social enterprise: a business whose core product is employment and training for people facing barriers to work.">work-integration social enterprise</span>, or WISE, a business whose real product is employment itself. Keep that term; it comes back in section 4, where it turns out to have the best evidence in the field.</p>
+
+  <h3>Nearby things that are not social enterprises</h3>
+
+  <p>Three neighbors cause most of the confusion. <em>Creating shared value</em> is <a class="cite" href="#ref-porter2011">Porter and Kramer</a>'s strategy for how large corporations can profit by addressing social needs; whatever its merits, and scholars dispute its win-win premise sharply (<a class="cite" href="#ref-crane2014">Crane et al.</a>), it describes Nestlé, not your applicant. <em>ESG investing</em> screens portfolios; impact investing, which section 6 defines properly, is narrower and more demanding. And the legal labels: a <em>benefit corporation</em> is a status under state law, which in Georgia lets directors weigh a stated public benefit against pure shareholder interest (<a class="cite" href="#ref-gacode">O.C.G.A. §&nbsp;14-2-1806</a>), while a <em>Certified B Corp</em> is a certification sold by a private nonprofit, B Lab. A company can be either, both, or neither, and none of it, by itself, makes anything a social enterprise. The screen in section 7 asks about substance, not labels.</p>
+
+  <p>One deep distinction underneath all of this, from <a class="cite" href="#ref-santos2012">Filipe Santos</a>: commercial entrepreneurs concentrate on <em>capturing</em> value, keeping a defensible share of the wealth they create, while social entrepreneurs concentrate on <em>creating</em> it, and are content to let much of it spill over to people who never pay. Economists call the spillover a positive externality. That generosity is why these ventures deserve philanthropic capital, and it is also why they struggle: they are built to leak value on purpose.</p>
+
+  <div class="note"><span class="lab">One-sentence test</span>Earns enough to keep running · solves a defined problem · protects the mission in its governance. All three, or it's something else wearing the costume.</div>
+</section>
+
+<section id="s3">
+  <div class="secnum">SECTION 3</div>
+  <h2>Why it is hard: hybridity and mission drift</h2>
+  <div class="rt">5 min read</div>
+
+  <p>A social enterprise keeps two scoreboards: did we help the people we exist for, and did we earn enough to keep going. Scholars call this <span class="gl" data-def="Combining social-mission and commercial logics in one organization. The tension is permanent, not a phase a venture grows out of.">hybridity</span>, and the central finding of a large literature is that the tension is permanent (<a class="cite" href="#ref-battilana2014">Battilana &amp; Lee</a>). A healthy social enterprise never resolves it; it manages it, year after year, the way a marriage manages the household budget. When a founder tells you the tension is behind them, they have usually just stopped noticing which scoreboard is winning.</p>
+
+  <p>The characteristic failure has a name: <span class="gl" data-def="A gradual slide toward commercial logic until the social purpose becomes secondary. It accumulates through ordinary, individually defensible choices.">mission drift</span>. Drift almost never arrives as one bad decision. It accumulates through ordinary choices, each defensible alone: this customer pays better, that hire has more polish, this contract is bigger. Over time the organization bends toward whoever pays its bills and away from the beneficiaries it was built for (<a class="cite" href="#ref-doherty2014">Doherty, Haugh &amp; Lyon</a>; <a class="cite" href="#ref-ebrahim2014gov">Ebrahim, Battilana &amp; Mair</a>). By the time drift is visible in the mission statement, it has been true in the customer list for years. So here is a habit worth forming early: ask who the organization spent the past year listening to.</p>
+
+  <p>The good news is that drift is a governance problem, and governance can be built. Studies of work-integration enterprises in France, the same species as Refuge Coffee, found that durable hybrids do concrete, imitable things: they hire people who can carry both logics and socialize them into one culture rather than bolting a "social team" onto a "business team" (<a class="cite" href="#ref-battilana2010">Battilana &amp; Dorado</a>). They keep social and commercial roles distinct but force them to meet in regular <em>spaces of negotiation</em> where trade-offs get argued openly (<a class="cite" href="#ref-battilana2015">Battilana, Sengul, Pache &amp; Model</a>). And they couple whichever practices satisfy each constituency without letting either swallow the whole (<a class="cite" href="#ref-pache2013">Pache &amp; Santos</a>). A board that meets quarterly and signs the minutes is not mission protection. A board that hears from beneficiaries directly, tracks a social scorecard beside the financial one, and has the standing to lose an argument with the founder is.</p>
+
+  <h3>The cautionary tale</h3>
+
+  <p>Microfinance shows what happens when the incentives win. As lending institutions moved from nonprofit roots to commercial ownership through the 2000s, the commercially oriented ones made larger loans and reached fewer of the poorest borrowers (<a class="cite" href="#ref-cull2007">Cull, Demirgüç-Kunt &amp; Morduch</a>). The starkest chapter came in Andhra Pradesh, India, in 2010: sales pressure ahead of stock-market listings, including SKS Microfinance's IPO, helped push loans onto borrowers faster than they could bear, and the state's over-indebtedness crisis followed (<a class="cite" href="#ref-mader2013">Mader</a>). None of this makes microcredit a fraud. It shows that a sound idea, run under the wrong ownership and weak governance, can hurt the very people it was invented to serve. That is why the screen in section 7 puts governance among the first-order questions.</p>
+
+  <div class="note"><span class="lab">Watch for</span>Drift shows up in the customer list before it shows up in the mission statement. Ask who they listened to last year.</div>
+</section>
+
+<section id="s4">
+  <div class="secnum">SECTION 4</div>
+  <h2>What the evidence actually shows</h2>
+  <div class="rt">7 min read</div>
+
+  <p>The most useful development in this field over the past two decades is that people started testing things. Abhijit Banerjee, Esther Duflo, and Michael Kremer won the <a class="cite" href="#ref-nobel2019">2019 Nobel in economics</a> for bringing the <span class="gl" data-def="Randomized controlled trial: the coin-flip method used to test medicines, applied to social programs to isolate what actually works.">randomized controlled trial</span>, medicine's coin-flip method, to poverty programs; <a class="cite" href="#ref-jpal">J-PAL</a>, the MIT lab Banerjee and Duflo co-founded, now counts more than 2,300 randomized evaluations across 100 countries. The shift matters for a grant reviewer because it replaced arguing about programs in the abstract with testing them one at a time.</p>
+
+  <p>The method has limits worth knowing from the start. A trial reports an average effect that may describe no individual in the study, and a result from Kenya does not automatically carry to Clarkston (<a class="cite" href="#ref-deaton2018">Deaton &amp; Cartwright</a>). RCTs are the best tool the field has for learning what works. They are not a promise that what worked there will work here.</p>
+
+  <h3>The microcredit correction</h3>
+
+  <p>Microcredit is the case where testing most changed the story, which is why every volunteer should know it. For thirty years the anecdotes were miraculous. Then six randomized evaluations, synthesized in 2015, found effects on the average borrower that were real but modest (<a class="cite" href="#ref-bkz2015">Banerjee, Karlan &amp; Zinman</a>), and the landmark Hyderabad trial found that access to microloans raised business investment while leaving health, education, and women's empowerment unchanged (<a class="cite" href="#ref-bdgk2015">Banerjee, Duflo, Glennerster &amp; Kinnan</a>). A parallel critique argued the premise itself was romantic: most poor borrowers are entrepreneurs by necessity, not calling, and a stable wage job usually does more for a family than a small loan (<a class="cite" href="#ref-karnani2007a">Karnani</a>). The lesson generalizes. Wherever anecdote has run far ahead of evidence, expect the correction to land on "modest," and respect ventures that claim modestly in the first place.</p>
+
+  <h3>Two benchmarks every reviewer should carry</h3>
+
+  <p>The first is <span class="gl" data-def="The benchmark question: would this program do more good than handing the same money directly to the same people?">cash</span>. A randomized study of unconditional cash transfers in Kenya found that simply giving money to poor households raised consumption, assets, and well-being, with no detectable splurge on temptation goods (<a class="cite" href="#ref-haushofer2016">Haushofer &amp; Shapiro</a>). Cash is cheap to deliver and hard to beat, which makes it the natural floor: would this program do more good than handing its budget directly to the people it serves? Good applicants have done that arithmetic. A team that has never divided its annual budget by the number of people it serves has already told you something.</p>
+
+  <p>The second is the spread. <a class="cite" href="#ref-givewell">GiveWell</a>, the strictest comparison shop in philanthropy, currently estimates its top global-health programs save a life for roughly $3,000 to $5,500. No Atlanta venture will clear a bar set by malaria chemoprevention, and Epiphany isn't asking any to. The number to internalize is not the bar but the range behind it: among worthwhile programs, cost-effectiveness routinely differs by a factor of ten or a hundred. Comparing applicants to each other, rather than each to zero, is most of a screener's value.</p>
+
+  <h3>The evidence closest to home</h3>
+
+  <p>For Epiphany's kind of grantee, the most relevant research concerns employment social enterprises, the WISE model from section 2. <a class="cite" href="#ref-redf">REDF</a>, the venture-philanthropy fund that KKR co-founder George Roberts started in 1997 (renamed Redefine Alliance in 2026), commissioned Mathematica to study workers at seven such enterprises. A year after starting, employment among participants had risen from 18 to 51 percent, monthly incomes had nearly tripled, stable housing had more than tripled, and every dollar the enterprises spent returned an estimated $2.23 in benefits to society, mostly through reduced public assistance and higher earnings (<a class="cite" href="#ref-rotz2015">Rotz, Maxwell &amp; Dunn</a>). It is one study, partly observational, in one country; read it as encouraging rather than settled. Still, when you review a venture that hires its way to impact, as Refuge does, know that the model has a name, a literature, and results worth taking seriously.</p>
+
+  <p>One more frame belongs here. C.&nbsp;K. Prahalad's <em><a class="cite" href="#ref-prahalad2002">The Fortune at the Bottom of the Pyramid</a></em> argued that companies could profitably serve, and thereby lift, the world's poorest consumers. <a class="cite" href="#ref-karnani2007b">Karnani's counterargument</a>, that the poor need stable jobs and public infrastructure more than they need to be marketed to, is the same argument he makes against microcredit. You will meet both spirits in applications: ventures that see the poor as customers, and ventures that see them as employees. Neither is automatically right; the evidence above is how you interrogate each.</p>
+
+  <div class="note"><span class="lab">The screening question</span>Would this beat giving the same people the same money? A strong applicant can say why, in numbers.</div>
+</section>
+
+<section id="s5">
+  <div class="secnum">SECTION 5</div>
+  <h2>What helps a venture succeed</h2>
+  <div class="rt">4 min read</div>
+
+  <p>Across the research, a few patterns separate ventures that hold together from ventures that wobble. They are where the questions in section 7 come from.</p>
+
+  <p>The sturdiest models are <em>integrated</em>: the business activity and the social good are the same act. Refuge sells coffee by employing trainees; the sale funds the mission and the work delivers it. Models where a side business bankrolls a separate charity can work, but they are structurally weaker, because the two halves compete for attention and capital (<a class="cite" href="#ref-doherty2014">Doherty, Haugh &amp; Lyon</a>). Related: the model is most stable when the people who benefit also pay, or when a reliable third party pays specifically for delivered outcomes. Ask who pays, early and bluntly. A model whose payer is neither the beneficiary nor a committed funder is resting on hope.</p>
+
+  <p>Strong ventures also earn trust on two fronts at once, what the literature calls <span class="gl" data-def="Being trusted on two fronts at once: that the business model is viable, and that the social claims are real.">legitimacy</span>: investors must believe the business works, and the community must believe the social claims are real (<a class="cite" href="#ref-wang2021">Wang &amp; Zhou</a>). And they test their assumptions instead of narrating them. The best causal evidence comes from ordinary startups, where a large study of A/B experimentation found that ventures which test systematically learn faster and perform better (<a class="cite" href="#ref-koning2022">Koning, Hasan &amp; Chatterji</a>); the lean-startup tradition has been adapted for social ventures, complete with a "minimum viable benefit" (<a class="cite" href="#ref-semcow2018">Semcow &amp; Morrison</a>). A founder who has changed course because the evidence said so is a better bet than one who has only ever argued well.</p>
+
+  <p>Finally, sound ventures measure what their position in the causal chain lets them measure honestly (<a class="cite" href="#ref-ebrahim2014impact">Ebrahim &amp; Rangan</a>). An early-stage program promising to demonstrate transformed lives is overpromising, and the overreach itself is a warning sign; counting placements, wages, and retention, and asking beneficiaries directly, is credible. On that last point, tools now exist so that "listen to beneficiaries" is a practice rather than a platitude: <a class="cite" href="#ref-sixtydb">60 Decibels</a> runs short phone surveys in beneficiaries' own languages, and <a class="cite" href="#ref-listen4good">Listen4Good</a> helps small nonprofits build feedback loops. An applicant does not need to use these tools, but "how do you hear from the people you serve?" should never draw a blank.</p>
+
+  <div class="note"><span class="lab">Overreach is a warning sign</span>Match the measurement promise to the venture's place in its causal chain. Modest and credible beats grand and unverifiable.</div>
+</section>
+
+<section id="s6">
+  <div class="secnum">SECTION 6</div>
+  <h2>Grants, and money with a mission</h2>
+  <div class="rt">7 min read</div>
+
+  <p>Epiphany makes grants, but those grants live in a larger world of mission-minded capital. Volunteers who know that world read applications better; applicants arrive speaking its language.</p>
+
+  <p><span class="gl" data-def="Investment made with the intention to generate positive, measurable social or environmental impact alongside a financial return. Narrower and more demanding than ESG.">Impact investing</span> is the demanding end of that world. The term was coined at a <a class="cite" href="#ref-rockefeller">Rockefeller Foundation gathering in Bellagio</a> in 2007, and the <a class="cite" href="#ref-giincore">Global Impact Investing Network (GIIN)</a> defines it by intention and follow-through: investments made with the intent to generate positive, measurable social or environmental impact alongside a financial return, and actively managed toward that impact. The market is real money: the <a class="cite" href="#ref-giinsizing">GIIN's most recent sizing</a> put it at roughly $1.57 trillion across about 3,900 organizations, an estimate rather than a census. Adjacent to it sits <span class="gl" data-def="Philanthropically backed, risk-tolerant capital with long time horizons, invested in enterprises serving the poor. Acumen's term.">patient capital</span>, Jacqueline Novogratz's term at <a class="cite" href="#ref-acumen">Acumen</a> for philanthropic capital that accepts high risk and long horizons to build enterprises serving the poor; Acumen reports that for every dollar it has invested, it has gotten 91 cents back, which is either a poor return or a remarkable one, depending on whether you count the schools, the solar, and the ambulances.</p>
+
+  <p>A grant sits at the far, giving end of this <span class="gl" data-def="The range of capital from ordinary investment through responsible, sustainable, and impact investing to pure philanthropy.">spectrum of capital</span>, and that position is a feature. A small grant can be <span class="gl" data-def="Patient, risk-tolerant, concessionary money whose job is to de-risk a venture so that other, more cautious capital will follow.">catalytic</span>: money that de-risks a venture enough for more cautious money to follow. Epiphany's own grants have worked this way; the one to Refuge Coffee seeded the larger fundraising that followed. The question a catalytic grant must answer is the single most important idea in this section.</p>
+
+  <h3>Additionality: the one-question due diligence</h3>
+
+  <p><span class="gl" data-def="The unique contribution a funder brings that is not otherwise available. If the venture would do the same thing without your grant, the grant added no impact.">Additionality</span> is grantmaker's jargon for a plain thought: if this venture would do the same thing without our grant, the grant added no impact; it only paid a bill. The <a class="cite" href="#ref-ieg">World Bank's evaluators</a> define it as the contribution a funder makes that the market would not otherwise supply. In practice one question does most of the work: <em>what, specifically, stalls if this grant does not arrive?</em> A concrete, credible "the second truck waits a year" is additionality. A vague "it would extend our runway" is a bill. The test cuts both ways, though; do not reject a sound venture on the speculation that someone else would surely fund it. Ask what stalls, and listen for specifics.</p>
+
+  <p>For structuring the rest of your diligence, the field's most useful checklist is the <a class="cite" href="#ref-fivedim">Five Dimensions of Impact</a>, developed by the Impact Management Project and now kept by Impact Frontiers: <em>what</em> outcome, for <em>whom</em>, <em>how much</em>, what the venture <em>contributes</em> beyond what would happen anyway, and what <em>risk</em> the impact doesn't materialize. A founder who can recite the five words but cannot say who specifically experiences the change, or how much of it, is reciting, not measuring.</p>
+
+  <h3>Two cautions about numbers</h3>
+
+  <p>First, measurement theater. <span class="gl" data-def="Social Return on Investment: a method that expresses social good as a single dollar ratio. Useful as disciplined narrative, never an objective score.">SROI</span> puts a dollar figure on social good and reports it as a ratio: every dollar invested is said to create so many dollars of social value. The method can discipline thinking, but every SROI number rests on judgment calls about what to count and how to price it; the critical literature is blunt that a value-judgment-free SROI does not exist (<a class="cite" href="#ref-nielsen2021">Nielsen, Lueg &amp; van Liempd</a>). Read an SROI as a structured story about what changed. Never let the ratio decide a grant.</p>
+
+  <p>Second, <span class="gl" data-def="Claiming impact that is not really there. Named the industry's leading challenge by 62% of investors in the GIIN's 2025 survey.">impact-washing</span>, claiming impact that is not really there. In the <a class="cite" href="#ref-giinsotm2025">GIIN's 2025 survey</a>, 62 percent of investors named impact-washing the industry's leading challenge. The same survey asked respondents about their own results: 90 percent were satisfied with their impact performance, and when asked to rank themselves against peers, not one respondent believed their own impact was below average. Everyone is worried about the neighbors; no one is the neighbors. Which is why self-report is not evidence, and why the screen asks for answers that can be checked.</p>
+
+  <h3>How to give well: the case for trust, after diligence</h3>
+
+  <p>One more piece of research changes how generous funders behave. Nonprofits systematically underinvest in their own infrastructure because funders punish "overhead," and then funders cite the resulting fragility as reason to restrict funds further; <a class="cite" href="#ref-goggins2009">Goggins Gregory and Howard</a> named this the <em>nonprofit starvation cycle</em>, and it is the strongest argument for funding organizations rather than line items. The practice that grew from it, <span class="gl" data-def="Multi-year, unrestricted funding with lighter reporting after the grant and heavier diligence before it.">trust-based philanthropy</span>, gives multi-year, flexible money and shifts the burden of proof to before the grant. The best evidence comes from the Ford Foundation's <a class="cite" href="#ref-fordbuild">BUILD program</a>, whose independent evaluation found grantees markedly more resilient; other large flexible funders, like <a class="cite" href="#ref-ballmer">Ballmer Group</a>, practice the model at scale, though with less published evaluation. For Epiphany the lesson is a sequence: rigorous questions before the check, freedom after it. The six-question screen is built to be used that way.</p>
+
+  <div class="note"><span class="lab">The additionality test</span>What stalls if this grant does not arrive? A specific answer is the impact. A vague one is a bill.</div>
+</section>
+
+<section id="s7">
+  <div class="secnum">SECTION 7</div>
+  <h2>The six-question screen</h2>
+  <div class="rt">6 min read · the part to keep</div>
+
+  <p>Epiphany already evaluates applications against five program criteria, set by the church:</p>
+
+  <div class="crit"><b>Epiphany's five criteria</b><br>Church fit · Compelling idea and societal impact · A self-supporting idea (a clear path to revenue beyond fundraising) · Founder and leadership · Engagement</div>
+
+  <p>The screen below is the analytical companion to those criteria: six questions, drawn from the research in sections 2 through 6, that turn "compelling idea" and "self-supporting" from impressions into findings. It is a structured aid to judgment, not a scoring formula. Use it in writing, before the money moves; a question a charismatic founder can pass verbally is not a screen unless a missing answer has a consequence. Two questions carry bright lines: if the answer is missing, the decision waits.</p>
+
+  <p>Two habits from any good grant process belong alongside it. If you know an applicant personally or professionally, say so early and step back from that decision. And treat what applicants share as confidential: they are handing strangers their finances and their dreams, and both deserve care.</p>
+
+  <div class="screen">
+    <div class="sq"><h4>Theory of change</h4>
+      <p>Can they hand you a roughly one-page causal chain from this grant to the outcome they claim? Good answer: a written chain, produced on request, with its weakest link acknowledged. Red flag: a chain that lives only in the founder's telling.</p>
+      <p class="bl">Bright line: no one-page chain on request → defer.</p></div>
+    <div class="sq"><h4>Who pays</h4>
+      <p>Is the model stable because beneficiaries pay, or because a credible third party reliably pays for outcomes? And is the model integrated: does the business activity itself create the good, the way Refuge's coffee shifts <em>are</em> the training? Good answer: names the payer, and shows the trading activity is the impact.</p>
+      <p class="bl">Bright line: cannot name who pays → defer.</p></div>
+    <div class="sq"><h4>Better than cash</h4>
+      <p>Take annual cost, divide by beneficiaries served, and ask: would handing each person that amount do less good than the program does? Is there evidence of outcomes, not just activity? If the team has never done this arithmetic, that is itself the finding.</p></div>
+    <div class="sq"><h4>Unit economics</h4>
+      <p>Is there a credible path to self-support, or does the plan quietly require grants forever? A permanent subsidy can be a legitimate choice, but only if it is acknowledged and someone reliable intends to pay it.</p></div>
+    <div class="sq"><h4>Mission-protective governance</h4>
+      <p>What structure defends the mission against drift: the board's composition, the legal form, a social scorecard, real channels for beneficiary feedback? "The founder really cares" is sincere, and it is not a structure.</p></div>
+    <div class="sq"><h4>Catalytic use of this grant</h4>
+      <p>What specific capacity or milestone happens because of this money that otherwise stalls? (Section 6's additionality test.) Good answer: concrete and dated. Weak answer: "runway."</p></div>
+  </div>
+
+  <p>And one closing question, in three parts, for the conversation rather than the form: what is the problem, why does this model beat the alternatives, and <em>what evidence would change your mind?</em> Teams that can answer the third part have thought about their own fallibility. Because humble-sounding answers are now a coached pitch move, test it: ask for the specific time they changed course because the evidence told them to. A real answer is a story with dates in it.</p>
+
+  <div class="note"><span class="lab">How to use it</span>All six answered in writing before the check. Then, if you fund: fund flexibly, and get out of the way. Diligence first is what makes trust afterward responsible.</div>
+</section>
+
+<section id="s8">
+  <div class="secnum">SECTION 8</div>
+  <h2>Practice: the screen applied to Refuge Coffee</h2>
+  <div class="rt">Exercise · 20 min with a group</div>
+
+  <p>Watch the film in section 1 again, then answer the six questions in writing, as a group. There are no trick answers; the point is to make the screen a habit before a live application is at stake.</p>
+
+  <div class="ex">
+    <p><em>Theory of change.</em> Shifts create paid work, training, English practice, mentoring, and belonging. Which links are strongest, and which would you want evidence for?</p>
+    <p><em>Who pays.</em> Customers buy coffee and catering; donors support the nonprofit. Which revenue is mission-integrated, and which is subsidy?</p>
+    <p><em>Better than cash.</em> What would a direct cash grant to trainees accomplish, and what does the work-and-community model add beyond it?</p>
+    <p><em>Unit economics.</em> What does growth require, and which costs rise as the mission deepens?</p>
+    <p><em>Governance.</em> How do trainees, alumni, staff, and board shape decisions, and what would early drift look like here, concretely?</p>
+    <p><em>Catalytic use.</em> Epiphany's grant set off a fundraising push for real capacity: air conditioning, renovation, a second truck. What would have stalled without it?</p>
+  </div>
+
+  <p>One caution worth naming in the room: Refuge describes itself as values-driven but deliberately not faith-based; it prizes what it calls agendalessness toward the people it serves. Epiphany funds ventures like this on purpose. The program asks that the work itself embody its values, whatever the founders believe, and a coffee company in Clarkston manages that one shift at a time.</p>
+</section>
+
+<section id="s9">
+  <div class="secnum">SECTION 9</div>
+  <h2>Serious but fragile</h2>
+  <div class="rt">2 min read</div>
+
+  <p>The honest summary of this field is that it is serious but fragile. Serious: forty years of scholarship, an evidence movement that won a Nobel, more than a trillion dollars of intentional capital, and local proof you can buy a latte from. Fragile: the hybrid tension never resolves, definitions stay contested, and impact is easiest to overstate for the people who most want it to be true. A volunteer who holds only one half of that summary will misjudge applicants in a predictable direction: the optimist funds good intentions, the skeptic funds nothing.</p>
+
+  <p>Holding both halves is the discipline, and it is an old one. The church has always known that generosity is a form of stewardship, that the gift is measured by whether it serves the person it names, and that discernment, the patience to ask the harder question first, is how love and rigor share one act. Fund clear theories of change. Prefer flexible money backed by real diligence. Treat metrics as aids, never verdicts. And remember why the care is worth it: the people on the other end of these grants, the trainee on her first shift, the family in the newly affordable room, are real, and so is the harm when generosity outruns judgment. Epiphany's wager is that a congregation full of businesspeople, lawyers, and engineers can be generous and careful in the same motion. This guide is for making good on it.</p>
+</section>
+
+<hr class="divider">
+
+<section id="appendix">
+  <div class="secnum">APPENDIX</div>
+  <h2>The scholarly depth, in nine pieces</h2>
+  <div class="rt">Open any section as a question comes up. None is required reading.</div>
+
+  <details><summary><span class="an">A1</span>The definition debate in full</summary><div class="body">
+    <p>The field has argued about its boundaries for over twenty-five years, and the argument is informative because where you draw the line decides what you fund. <a class="cite" href="#ref-dees1998">Dees (1998)</a> is the origin essay: social entrepreneurs as change agents in the social sector, with five idealized characteristics he was explicit were a north star, not a description. <a class="cite" href="#ref-martin2007">Martin and Osberg (2007)</a> argued for a tight boundary, reserving the term for ventures that transform an unjust equilibrium, deliberately excluding routine social services and pure activism. <a class="cite" href="#ref-mair2006">Mair and Marti (2006)</a> framed social entrepreneurship as a value-creating process catalyzing social change, shaped by its local setting. <a class="cite" href="#ref-santos2012">Santos (2012)</a> supplied the cleanest theory: value creation versus value capture, with social ventures defined by their comfort with positive externalities.</p>
+    <p>Recent syntheses confirm both convergence and unsettledness: a content analysis found workable consensus on core elements (<a class="cite" href="#ref-wu2020">Wu, Wu &amp; Sharpe 2020</a>), a scientometric mapping of 5,874 publications found definition still the field's central problem (<a class="cite" href="#ref-klarin2023">Klarin &amp; Suseno 2023</a>), and a critical history argues the concept has evolved in waves and remains contested on purpose (<a class="cite" href="#ref-teasdale2023">Teasdale, Bellazzecca, de Bruin &amp; Roy 2023</a>). A four-level distinction keeps conversations unmuddled: the process (social entrepreneurship), the actor (the entrepreneur), the organization (the social enterprise), and the specific venture.</p>
+  </div></details>
+
+  <details><summary><span class="an">A2</span>Two paradigms and the legal forms</summary><div class="body">
+    <p>The concept developed differently on each side of the Atlantic. The American "earned income" tradition framed social enterprise as a response to shrinking public funding, with a celebratory emphasis on individual innovators. The European tradition, articulated by the EMES research network, defines it by collective features: explicit social aims, democratic governance, constrained profit distribution, continuous trading (<a class="cite" href="#ref-defourny2012">Defourny &amp; Nyssens 2012</a>). A venture that looks like a clear social enterprise under one paradigm can look marginal under the other; that is a paradigm difference, not a quality difference. The work-integration social enterprise (WISE), central to sections 2 and 4, is the European tradition's flagship form.</p>
+    <p>On legal forms, for an Atlanta program: Georgia adopted benefit-corporation law in 2020 (effective January 1, 2021), Article 18 of the corporate code. Section 14-2-1802 defines the form; the substantive protection is <a class="cite" href="#ref-gacode">§&nbsp;14-2-1806</a>, which requires directors to consider the stated public benefit and shields them from liability for weighing it against shareholder return. A <em>Certified B Corp</em> is different: a certification from the private nonprofit B Lab. A company can be either, both, or neither, and neither status alone makes it a social enterprise.</p>
+  </div></details>
+
+  <details><summary><span class="an">A3</span>Yunus's social business: the five lessons and the seven principles</summary><div class="body">
+    <p>The Grameen tradition appears in two registers that should not be merged. The peer-reviewed account is <a class="cite" href="#ref-yunus2010">Yunus, Moingeon and Lehmann-Ortega (2010)</a>, which distills the Grameen experience into five lessons for building social-business models; distinctive to the form is the no-loss, no-dividend structure, in which investors recover principal only and profits are retained for the mission. Separately, the Yunus Centre promulgates Seven Principles of Social Business, developed by Yunus with Hans Reitz, of which the seventh is that the work be done with joy. The two lists come from different places and do different jobs: cite the paper for theory, the principles for ethos.</p>
+  </div></details>
+
+  <details><summary><span class="an">A4</span>Creating shared value and the triple bottom line</summary><div class="body">
+    <p><a class="cite" href="#ref-porter2011">Porter and Kramer (2011)</a> proposed that corporations can create economic value by addressing social needs, through reconceived products, redefined value chains, and local cluster-building. The canonical rebuttal (<a class="cite" href="#ref-crane2014">Crane, Palazzo, Spence &amp; Matten 2014</a>) charges that the idea is unoriginal, ignores the real tensions of responsible business, is naive about compliance, and rests on a shallow view of the corporation; its sharpest line is that the win-win premise is a false promise. The triple bottom line belongs in the same drawer as a caution: <a class="cite" href="#ref-elkington2018">John Elkington</a>, who coined the phrase, publicly recalled it in 2018, arguing its systemic intent had decayed into reporting and marketing. The pattern to remember is the same one that runs through SROI and impact-washing: measurement concepts meant to change behavior tend to decay into theater unless governance keeps them honest.</p>
+  </div></details>
+
+  <details><summary><span class="an">A5</span>Hybridity and governance, in depth</summary><div class="body">
+    <p><a class="cite" href="#ref-battilana2014">Battilana and Lee (2014)</a> mapped hybrid organizing across five dimensions of tension: core activities, workforce, organizational design, external relationships, culture. <a class="cite" href="#ref-battilana2010">Battilana and Dorado (2010)</a>, comparing two Bolivian commercial microfinance organizations, found recruitment and socialization the critical early levers; the durable identity came from hiring on a relatively clean slate and building one blended culture. <a class="cite" href="#ref-pache2013">Pache and Santos (2013)</a>, studying four work-integration enterprises, showed hybrids survive by selectively coupling elements of each logic rather than compromising everything. <a class="cite" href="#ref-battilana2015">Battilana, Sengul, Pache and Model (2015)</a>, with panel data on French WISEs, found that strong social imprinting boosts social performance directly but can undermine it through lower productivity, and that the best performers keep social and commercial roles distinct while forcing them into regular spaces of negotiation.</p>
+    <p>On governance specifically: <a class="cite" href="#ref-ebrahim2014gov">Ebrahim, Battilana and Mair (2014)</a> frame drift as an accountability problem, with downward accountability to beneficiaries the hardest to sustain; <a class="cite" href="#ref-cornforth2014">Cornforth (2014)</a> offers the practical playbook for combating drift; <a class="cite" href="#ref-wolf2019">Wolf and Mair (2019)</a> describe proactive governance as purpose, commitment, and coordination around small wins. A critical strand documents genuine dark sides, harm to staff, clients, communities, and romanticized founder narratives that obscure weak evidence (<a class="cite" href="#ref-molderez2023">Molderez &amp; Fets 2023</a>). All of it argues for harder questions, not less funding.</p>
+  </div></details>
+
+  <details><summary><span class="an">A6</span>The evidence movement, in depth</summary><div class="body">
+    <p>The microcredit reckoning: the six-study synthesis (<a class="cite" href="#ref-bkz2015">Banerjee, Karlan &amp; Zinman 2015</a>) and the Hyderabad trial (<a class="cite" href="#ref-bdgk2015">Banerjee, Duflo, Glennerster &amp; Kinnan 2015</a>) together establish modest, real, non-transformative average effects. The structural critique (<a class="cite" href="#ref-karnani2007a">Karnani 2007</a>, <a class="cite" href="#ref-karnani2011">2011</a>) argues most microcredit clients are entrepreneurs by necessity and that wage employment and public infrastructure do more; it converges with the trials from a different method. On commercialization: cross-sectionally, commercially oriented lenders make larger loans and reach fewer of the poorest (<a class="cite" href="#ref-cull2007">Cull, Demirgüç-Kunt &amp; Morduch 2007</a>), though panel evidence finds no inexorable industry-wide drift (<a class="cite" href="#ref-mersland2010">Mersland &amp; Strøm 2010</a>); <a class="cite" href="#ref-mader2013">Mader (2013)</a> is the scholarly anchor for the Andhra Pradesh crisis.</p>
+    <p>Cash transfers: <a class="cite" href="#ref-haushofer2016">Haushofer and Shapiro (2016)</a> found unconditional transfers raised consumption, assets, and well-being with no rise in temptation spending, which is why cash anchors the benchmark. Method humility: <a class="cite" href="#ref-deaton2018">Deaton and Cartwright (2018)</a> on why randomization guarantees neither balance in one trial nor generalization beyond it. Cost-effectiveness spread: <a class="cite" href="#ref-givewell">GiveWell's current estimates</a> run roughly $3,000 to $5,500 per life saved for its top programs (about $4,000 for seasonal malaria chemoprevention, $5,500 for bednets, from 2022–2024 grants); in late 2025 GiveWell moved from "multiples of cash" language to a formal benchmark, and its funding bar now sits at six times that benchmark. Read all such figures as snapshots that GiveWell updates continually; read them for the orders-of-magnitude spread, not the bar. Employment social enterprises: the Mathematica Jobs Study (<a class="cite" href="#ref-rotz2015">Rotz, Maxwell &amp; Dunn 2015</a>) is the key reference, summarized in section 4.</p>
+  </div></details>
+
+  <details><summary><span class="an">A7</span>Testing early: lean methods for social ventures</summary><div class="body">
+    <p>The operational detail behind "test your assumptions" comes from the lean-startup tradition adapted for social impact. The core loop is build, measure, learn; the social adaptation adds the minimum viable benefit, the smallest version of the intervention that can demonstrate real social value (<a class="cite" href="#ref-ssir2024mvb">SSIR 2024</a>), and structured discovery curricula such as I-Corps for Social Impact, which requires on the order of a hundred stakeholder interviews before a go decision (<a class="cite" href="#ref-semcow2018">Semcow &amp; Morrison 2018</a>). The causal foundation is from ordinary startups: systematic experimenters learn faster and perform better (<a class="cite" href="#ref-koning2022">Koning, Hasan &amp; Chatterji 2022</a>). On resourcefulness, bricolage and a founder's social relationships feed performance largely through the business-model innovation they enable (<a class="cite" href="#ref-wang2021">Wang &amp; Zhou 2021</a>); practitioner guides on scaling and asset-based community development round out the toolkit (<a class="cite" href="#ref-aspect2021">Aspect 2021</a>; <a class="cite" href="#ref-movingworlds">MovingWorlds</a>).</p>
+  </div></details>
+
+  <details><summary><span class="an">A8</span>Impact-measurement frameworks, in depth</summary><div class="body">
+    <p>The <a class="cite" href="#ref-giincore">GIIN's definition</a> rests on four characteristics: intentionality, use of evidence in design, active impact management, and contribution to industry growth. <a class="cite" href="#ref-iris">IRIS+</a> is its catalog of standardized metrics. The Five Dimensions of Impact (what, who, how much, contribution, risk) came from the Impact Management Project and are stewarded by <a class="cite" href="#ref-fivedim">Impact Frontiers</a>. The <a class="cite" href="#ref-ifc">IFC's Operating Principles</a> formalize nine practices across the investment lifecycle. The Spectrum of Capital (<a class="cite" href="#ref-bridges">Bridges 2013</a>) maps strategies from traditional investment to philanthropy; catalytic capital (<a class="cite" href="#ref-c3">Catalytic Capital Consortium</a>) and patient capital (<a class="cite" href="#ref-acumen">Acumen</a>) name the concessionary edge, and <a class="cite" href="#ref-bannick2017">Bannick, Goldman, Kubzansky and Saltuk (2017)</a> justify sub-commercial returns for market-level impact from twelve years of Omidyar investing.</p>
+    <p>SROI: seven principles from <a class="cite" href="#ref-svi">Social Value International</a>; the critical literature (<a class="cite" href="#ref-nielsen2021">Nielsen, Lueg &amp; van Liempd 2021</a>) is direct that the method depends on analyst discretion and subjective proxies, and a single ratio should never decide a grant. Survey self-report: the <a class="cite" href="#ref-giinsotm2025">GIIN's 2025 survey</a> found 62 percent naming impact-washing the leading industry challenge while 90 percent were satisfied with their own impact and none ranked themselves below peers; treat self-assessment as context, not evidence. Trust-based philanthropy: the <a class="cite" href="#ref-tbp">Trust-Based Philanthropy Project</a> states the model; the <a class="cite" href="#ref-fordbuild">Ford BUILD independent evaluation (NIRAS)</a> is the best published evidence that flexible multi-year funding strengthens organizations; <a class="cite" href="#ref-ballmer">Ballmer Group</a> practices it at scale with less published evaluation; the starvation-cycle article (<a class="cite" href="#ref-goggins2009">Goggins Gregory &amp; Howard 2009</a>) supplies the underlying mechanism. The counterweight stands: trust without diligence is negligence in generous clothing.</p>
+  </div></details>
+
+  <details><summary><span class="an">A9</span>The screen, and what happens after the grant</summary><div class="body">
+    <p>The six-question screen synthesizes the research in this guide with the frameworks in A8, alongside Epiphany's five program criteria; it is a structured judgment aid, not a validated instrument. What a fundable applicant looks like, in one picture: hands you a one-page causal chain unprompted, names who pays and shows the paying activity is itself the social good, has done the cost-per-beneficiary arithmetic against cash, shows a credible route off permanent subsidy (or names its permanent payer honestly), points to a board and structure that protect the mission, and tells a dated story of changing course on evidence. That is a yes.</p>
+    <p>After a grant, three light checks: theory-of-change alignment (is the venture doing what its chain said), fit-for-purpose outcome measurement scaled to its stage (<a class="cite" href="#ref-iris">IRIS+</a> metrics or the <a class="cite" href="#ref-dced">DCED Standard</a> for guidance, beneficiary feedback via tools like <a class="cite" href="#ref-sixtydb">60 Decibels</a> or <a class="cite" href="#ref-listen4good">Listen4Good</a>), and a periodic mission-fidelity look for early drift, in the customer list first. Keep post-grant reporting lighter than pre-grant diligence; that is the trust-based sequence working as designed.</p>
+  </div></details>
+</section>
+
+<section id="cases">
+  <div class="secnum">EXPLORE</div>
+  <h2>Cases &amp; local studies</h2>
+  <div class="rt">Practice material, not success stories. Start local, move to evidence, end at the screen.</div>
+
+  <div class="case"><span class="tag">Epiphany alumnus · anchor case</span>
+    <h3>Refuge Coffee Co. — coffee as the classroom</h3>
+    <p>Founded 2015 by Kitti Murray in Clarkston; a 501(c)(3) work-integration social enterprise whose shops and catering are the training program. Fifty-five baristas from eighteen countries since 2015; trainees serve 12–14 months in paid full-time roles; over 70 percent of full-time staff are resettled refugees or immigrants. Core tension to discuss: growing revenue without letting hospitality, training, and refugee leadership become secondary.</p>
+    <p class="links"><a href="https://www.refugecoffeeco.com/">Official site</a> <a href="https://www.refugecoffeeco.com/refuge-job-training/">Job training</a> <a href="https://www.pbs.org/video/secret-atlanta-refuge-coffee-company/">PBS clip</a> <a href="https://www.focalpoint.firstpresatl.org/2019/community-in-every-cup">The church's story</a></p></div>
+
+  <div class="case"><span class="tag">Atlanta social enterprise</span>
+    <h3>Goodr — food waste, logistics, and hunger</h3>
+    <p>Jasmine Crowe-Houston founded Goodr in 2017 after years of feeding Atlantans from her own kitchen; the company reroutes surplus food from businesses to people in need. Useful for distinguishing outputs from outcomes: moving food is not yet reducing food insecurity. Ask what evidence would show incremental benefit. Core tension: enterprise growth, corporate customers, beneficiary dignity, impact verification.</p>
+    <p class="links"><a href="https://goodr.co/our-story/">Goodr's story</a> <a href="https://www.ted.com/talks/jasmine_crowe_houston_the_delicious_potential_of_rescuing_wasted_food">TEDNext talk</a></p></div>
+
+  <div class="case"><span class="tag">Local ecosystem model</span>
+    <h3>Start:ME Atlanta — place-based microbusiness support</h3>
+    <p>Run by Emory's Goizueta Business School: a free four-month program of training, mentorship, and grant capital that has served 500+ Atlanta microbusinesses, roughly three-quarters women-led and more than 80 percent led by people of color. The lesson for grantmakers: sometimes the highest-leverage grant funds capacity around entrepreneurs rather than a single founder. Core tension: depth of support versus breadth served.</p>
+    <p class="links"><a href="https://www.startmeatl.org/">Start:ME Atlanta</a></p></div>
+
+  <div class="case"><span class="tag">Georgia impact ecosystem</span>
+    <h3>Georgia Social Impact Collaborative</h3>
+    <p>The statewide hub for impact capital, and directly relevant to a congregation: GSIC publishes a Faith-Based Impact Investing Starter Kit and reports that U.S. religious institutions already hold $200–400 billion in impact investments. It has featured Epiphany ventures on its own blog. Use it to see Epiphany as part of an ecosystem, and to ask what capital or partners a grantee needs after Epiphany.</p>
+    <p class="links"><a href="https://gasocialimpact.com/">GSIC</a> <a href="https://gasocialimpact.com/faith-based-impact-investing-starter-kit/">Faith-based starter kit</a></p></div>
+</section>
+
+<section id="watch">
+  <div class="secnum">EXPLORE</div>
+  <h2>Watch library</h2>
+  <div class="rt">Five films, each teaching one skill. All play inline.</div>
+
+  <h3>The anchor case — 4 min</h3>
+  <div class="videowrap"><iframe loading="lazy" src="https://player.pbs.org/viralplayer/secret-atlanta-refuge-coffee-company/" allowfullscreen title="PBS Secret Atlanta: Refuge Coffee Company"></iframe></div>
+  <p class="vcap">PBS <em>Secret Atlanta</em>: Refuge Coffee Company. Watch, then walk the six-question screen against a real Atlanta venture.</p>
+
+  <h3>The evidence on-ramp — 17 min</h3>
+  <div class="videowrap"><iframe loading="lazy" src="https://embed.ted.com/talks/esther_duflo_social_experiments_to_fight_poverty" allowfullscreen title="Esther Duflo: Social experiments to fight poverty"></iframe></div>
+  <p class="vcap">Esther Duflo, TED2010: how randomized trials tell us which development efforts help and which hurt. The spirit of section 4 in one talk.</p>
+
+  <h3>An Atlanta founder on her model — 13 min</h3>
+  <div class="videowrap"><iframe loading="lazy" src="https://embed.ted.com/talks/jasmine_crowe_houston_the_delicious_potential_of_rescuing_wasted_food" allowfullscreen title="Jasmine Crowe-Houston: The delicious potential of rescuing wasted food"></iframe></div>
+  <p class="vcap">Jasmine Crowe-Houston at TEDNext 2024 on Goodr. Listen for outputs versus outcomes as she talks.</p>
+
+  <h3>Patient capital — 18 min</h3>
+  <div class="videowrap"><iframe loading="lazy" src="https://embed.ted.com/talks/jacqueline_novogratz_patient_capitalism" allowfullscreen title="Jacqueline Novogratz: Patient capitalism"></iframe></div>
+  <p class="vcap">Jacqueline Novogratz, TED2007: the case for philanthropic capital that accepts risk and long horizons. Section 6's spectrum of capital, made human.</p>
+
+  <h3>The provocation — 19 min</h3>
+  <div class="videowrap"><iframe loading="lazy" src="https://embed.ted.com/talks/dan_pallotta_the_way_we_think_about_charity_is_dead_wrong" allowfullscreen title="Dan Pallotta: The way we think about charity is dead wrong"></iframe></div>
+  <p class="vcap">Dan Pallotta, TED2013, on the overhead obsession. A fair warning: the talk overclaims in places and drew sharp published rebuttals; watch it with A8's starvation-cycle research in hand and argue with it. It is the best conversation-starter in the field for donors.</p>
+
+  <p>Two short explainers from Duke's CASE center round out the set, hosted on their site: <a href="https://case.fuqua.duke.edu/knowledge_items/impact-explained-a-framework-to-drive-impact/">Impact Explained</a> (theory of change and logic models) and <a href="https://case.fuqua.duke.edu/knowledge_items/5-dimensions-of-impact-video/">The 5 Dimensions of Impact</a>. For a written introduction to when randomized evaluation is and isn't the right tool, J-PAL's <a href="https://www.povertyactionlab.org/resource/introduction-randomized-evaluations">Introduction to Randomized Evaluations</a> is the standard reading.</p>
+</section>
+
+<section id="reading">
+  <div class="secnum">EXPLORE</div>
+  <h2>Annotated reading path</h2>
+  <div class="rt">Main guide first, then the relevant appendix section, then these primary sources, in order.</div>
+
+  <ol class="readpath">
+    <li><strong>Dees (1998), "The Meaning of Social Entrepreneurship."</strong> The origin essay. Read it for the idealized definition and Dees's own warning that it describes a north star, not any real venture.</li>
+    <li><strong>Defourny &amp; Nyssens (2012), the EMES approach.</strong> Why the concept looks different in Europe than in America, so you never mistake a paradigm difference for a quality difference.</li>
+    <li><strong>Yunus, Moingeon &amp; Lehmann-Ortega (2010), "Building Social Business Models."</strong> The no-loss, no-dividend pole of the spectrum, in the founders' own theory.</li>
+    <li><strong>Porter &amp; Kramer (2011) with Crane et al. (2014).</strong> The shared-value proposal and its rebuttal, read as a pair: the best short course in how this field argues.</li>
+    <li><strong>Doherty, Haugh &amp; Lyon (2014), "Social Enterprises as Hybrid Organizations."</strong> The central managerial problem: mission, money, capital, and people held in tension at once.</li>
+    <li><strong>Battilana, Sengul, Pache &amp; Model (2015), "Harnessing Productive Tensions."</strong> The WISE study: social imprinting, its hidden cost, and spaces of negotiation. The closest research to Epiphany's anchor case.</li>
+    <li><strong>Banerjee, Karlan &amp; Zinman (2015) with Banerjee, Duflo, Glennerster &amp; Kinnan (2015).</strong> The microcredit correction: the discipline of "modest, not transformative."</li>
+    <li><strong>Haushofer &amp; Shapiro (2016), the Kenya cash-transfer trial.</strong> Internalize the benchmark every program should have to beat.</li>
+    <li><strong>Rotz, Maxwell &amp; Dunn (2015), the Mathematica Jobs Study.</strong> The evidence for employment social enterprises: $2.23 returned per dollar spent, and the numbers behind it.</li>
+    <li><strong>Deaton &amp; Cartwright (2018), "Understanding and Misunderstanding RCTs."</strong> Take trial evidence seriously without mistaking it for portable proof.</li>
+    <li><strong>Ebrahim &amp; Rangan (2014), "What Impact?"</strong> Why what a venture should measure depends on where it sits in its causal chain. The antidote to grandiose measurement promises.</li>
+    <li><strong>The toolkit, last:</strong> GIIN's Core Characteristics and market sizing, Impact Frontiers' Five Dimensions, the IFC Operating Principles, and Goggins Gregory &amp; Howard (2009) on the starvation cycle. Frameworks land better once the concepts underneath them are yours.</li>
+  </ol>
+</section>
+
+<section id="glossary">
+  <div class="secnum">EXPLORE</div>
+  <h2>Glossary</h2>
+  <div class="rt">The working vocabulary. Dotted-underlined terms in the text show these on hover.</div>
+  <dl class="gloss">
+    <dt>Social enterprise</dt><dd>An organization that earns enough to keep running while solving a defined social or environmental problem, with mission protection built into who decides what.</dd>
+    <dt>Trading</dt><dd>Earning revenue by selling goods or services rather than relying on donations.</dd>
+    <dt>Work-integration social enterprise (WISE)</dt><dd>A business whose core product is employment and training for people facing barriers to work. Refuge Coffee is one.</dd>
+    <dt>Hybridity</dt><dd>Running on two scoreboards at once, social impact and financial survival. The tension is permanent, not a phase.</dd>
+    <dt>Mission drift</dt><dd>A gradual slide toward commercial logic until the social purpose becomes secondary, accumulated through individually defensible choices.</dd>
+    <dt>Theory of change</dt><dd>The step-by-step causal story of how a venture's work turns into the outcome it promises.</dd>
+    <dt>Additionality</dt><dd>The contribution a funder makes that would not otherwise happen. If the venture would do the same thing without your grant, the grant paid a bill.</dd>
+    <dt>Impact investing</dt><dd>Investment intending positive, measurable social or environmental impact alongside financial return, actively managed toward it. Narrower than ESG.</dd>
+    <dt>Patient capital</dt><dd>Acumen's term: philanthropic, risk-tolerant capital with long horizons for enterprises serving the poor.</dd>
+    <dt>Catalytic capital</dt><dd>Concessionary money whose job is to de-risk a venture so more cautious capital will follow.</dd>
+    <dt>Spectrum of capital</dt><dd>The range from ordinary investment through responsible, sustainable, and impact investing to pure philanthropy. A grant sits at the giving end.</dd>
+    <dt>SROI</dt><dd>Social Return on Investment: a dollar ratio for social good. A disciplined narrative at best, never an objective score.</dd>
+    <dt>Impact-washing</dt><dd>Claiming impact that is not really there. Named the industry's leading challenge by 62% of investors in the GIIN's 2025 survey.</dd>
+    <dt>RCT</dt><dd>Randomized controlled trial: the coin-flip method used to test medicines, applied to social programs.</dd>
+    <dt>Better than cash</dt><dd>The benchmark question: would this program do more good than handing the same money directly to the same people?</dd>
+    <dt>Legitimacy</dt><dd>Being trusted on two fronts at once: that the business model is viable and that the social claims are real.</dd>
+    <dt>Creating shared value</dt><dd>A corporate strategy of generating business value by addressing social needs. Its win-win premise is academically disputed.</dd>
+    <dt>Trust-based philanthropy</dt><dd>Multi-year, flexible grants with lighter reporting after the grant and heavier diligence before it.</dd>
+    <dt>Benefit corporation</dt><dd>A legal status under state law (in Georgia, O.C.G.A. §§ 14-2-1801–1807) committing a company to a public benefit. Distinct from B Lab's private Certified B Corp label.</dd>
+    <dt>Navigator</dt><dd>An Epiphany volunteer who mentors finalist ventures through business planning during the coaching period.</dd>
+  </dl>
+</section>
+
+<section id="refs" class="refs">
+  <div class="secnum">EXPLORE</div>
+  <h2>References</h2>
+  <div class="rt">Grouped by theme, one-line annotations. Inline citations in the text use author and year.</div>
+
+  <h3 class="refgroup">A · Definitions and foundations</h3>
+  <ol>
+    <li id="ref-dees1998">Dees, J. G. (1998, rev. 2001). <a href="https://web.stanford.edu/class/e145/2007_fall/materials/dees_SE.pdf">"The Meaning of Social Entrepreneurship."</a> The foundational essay; five idealized characteristics, explicitly a standard to aim at rather than a description.</li>
+    <li id="ref-martin2007">Martin, R. L., &amp; Osberg, S. (2007). <a href="https://ssir.org/articles/entry/social_entrepreneurship_the_case_for_definition">"Social Entrepreneurship: The Case for Definition."</a> <em>Stanford Social Innovation Review</em>, 5(2). The strict definition: transforming an unjust equilibrium.</li>
+    <li id="ref-mair2006">Mair, J., &amp; Marti, I. (2006). <a href="https://doi.org/10.1016/j.jwb.2005.09.002">"Social entrepreneurship research: A source of explanation, prediction, and delight."</a> <em>Journal of World Business</em>, 41(1), 36–44. The process view, and embeddedness.</li>
+    <li id="ref-santos2012">Santos, F. M. (2012). <a href="https://doi.org/10.1007/s10551-012-1413-4">"A Positive Theory of Social Entrepreneurship."</a> <em>Journal of Business Ethics</em>, 111(3), 335–351. Value creation versus value capture.</li>
+    <li id="ref-yunus2010">Yunus, M., Moingeon, B., &amp; Lehmann-Ortega, L. (2010). <a href="https://doi.org/10.1016/j.lrp.2009.12.005">"Building Social Business Models: Lessons from the Grameen Experience."</a> <em>Long Range Planning</em>, 43(2–3), 308–325. The no-loss, no-dividend form. (The Seven Principles of Social Business, including "do it with joy," are the Yunus Centre's separate list, developed with Hans Reitz.)</li>
+    <li id="ref-defourny2012">Defourny, J., &amp; Nyssens, M. (2012). <a href="https://emes.net/content/uploads/publications/EMES-WP-12-03_Defourny-Nyssens.pdf">"The EMES Approach of Social Enterprise in a Comparative Perspective."</a> EMES WP 12/03. The European paradigm.</li>
+    <li>Snowden, M., Halsall, J., &amp; Oberoi, R. <a href="https://www.qaa.ac.uk/docs/qaa/members/social-enterprise-an-overview.pdf">"Social Enterprise: An Overview."</a> QAA members' resource. Origins in cooperative and earned-income traditions.</li>
+    <li id="ref-calo2024">Calò, F., Sancino, A., &amp; Scognamiglio, F. (2024). "Social enterprise and social entrepreneurship in the public administration scholar field." <em>Public Management Review</em>, 26(10), 3013–3039. <a href="https://www.tandfonline.com/doi/full/10.1080/14719037.2024.2311181">Open access</a>.</li>
+    <li id="ref-wu2020">Wu, Y. J., Wu, T., &amp; Sharpe, J. A. (2020). <a href="https://www.emerald.com/md/article/58/12/2593/278688/Consensus-on-the-definition-of-social">"Consensus on the definition of social entrepreneurship: a content analysis approach."</a> <em>Management Decision</em>, 58(12), 2593–2619.</li>
+    <li id="ref-klarin2023">Klarin, A., &amp; Suseno, Y. (2023). <a href="https://journals.sagepub.com/doi/10.1177/00076503221101611">"An Integrative Literature Review of Social Entrepreneurship Research."</a> <em>Business &amp; Society</em>, 62(3), 565–611. Scientometric map of 5,874 publications; definition remains the field's central problem.</li>
+    <li id="ref-teasdale2023">Teasdale, S., Bellazzecca, E., de Bruin, A., &amp; Roy, M. J. (2023). "The (R)evolution of the Social Entrepreneurship Concept: A Critical Historical Review." <em>Nonprofit and Voluntary Sector Quarterly</em>, 52(1_suppl). <a href="https://researchonline.gcu.ac.uk/ws/files/61582566/08997640221130691.pdf">Open access</a>.</li>
+    <li id="ref-ashoka">Ashoka. <a href="https://www.ashoka.org/en-us/story/ashokas-history">"Ashoka's History."</a> Bill Drayton founded Ashoka in 1980 and popularized the term "social entrepreneur."</li>
+    <li id="ref-nobel2006">Norwegian Nobel Committee (2006). <a href="https://www.nobelprize.org/prizes/peace/2006/summary/">Nobel Peace Prize to Muhammad Yunus and Grameen Bank.</a></li>
+  </ol>
+
+  <h3 class="refgroup">B · Hybridity and governance</h3>
+  <ol>
+    <li id="ref-battilana2014">Battilana, J., &amp; Lee, M. (2014). <a href="https://doi.org/10.5465/19416520.2014.893615">"Advancing Research on Hybrid Organizing."</a> <em>Academy of Management Annals</em>, 8(1), 397–441. Five dimensions of hybrid tension (distinct from the Five Dimensions of Impact in group F).</li>
+    <li id="ref-doherty2014">Doherty, B., Haugh, H., &amp; Lyon, F. (2014). <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/ijmr.12028">"Social Enterprises as Hybrid Organizations: A Review and Research Agenda."</a> <em>International Journal of Management Reviews</em>, 16(4), 417–436. The leading review.</li>
+    <li id="ref-battilana2010">Battilana, J., &amp; Dorado, S. (2010). <a href="https://journals.aom.org/doi/10.5465/AMJ.2010.57318391">"Building Sustainable Hybrid Organizations."</a> <em>Academy of Management Journal</em>, 53(6), 1419–1440. Recruitment and socialization as the early levers.</li>
+    <li id="ref-pache2013">Pache, A.-C., &amp; Santos, F. (2013). <a href="https://journals.aom.org/doi/10.5465/amj.2011.0405">"Inside the Hybrid Organization: Selective Coupling as a Response to Competing Institutional Logics."</a> <em>Academy of Management Journal</em>, 56(4), 972–1001. Four work-integration social enterprises.</li>
+    <li id="ref-battilana2015">Battilana, J., Sengul, M., Pache, A.-C., &amp; Model, J. (2015). <a href="https://journals.aom.org/doi/10.5465/amj.2013.0903">"Harnessing Productive Tensions in Hybrid Organizations: The Case of Work Integration Social Enterprises."</a> <em>Academy of Management Journal</em>, 58(6), 1658–1685. Social imprinting and spaces of negotiation.</li>
+    <li id="ref-ebrahim2014gov">Ebrahim, A., Battilana, J., &amp; Mair, J. (2014). <a href="https://www.hbs.edu/faculty/Pages/item.aspx?num=47977">"The Governance of Social Enterprises: Mission Drift and Accountability Challenges in Hybrid Organizations."</a> <em>Research in Organizational Behavior</em>, 34, 81–100.</li>
+    <li id="ref-cornforth2014">Cornforth, C. (2014). <a href="https://doi.org/10.1108/SEJ-09-2013-0036">"Understanding and Combating Mission Drift in Social Enterprises."</a> <em>Social Enterprise Journal</em>, 10(1), 3–20. The practical anti-drift playbook. <a href="https://oro.open.ac.uk/39882/">Open access</a>.</li>
+    <li id="ref-wolf2019">Wolf, M., &amp; Mair, J. (2019). <a href="https://www.cambridge.org/core/product/C2A5F7B679AFAA0528720C03AF2ED289">"Purpose, Commitment and Coordination Around Small Wins: A Proactive Approach to Governance in Integrated Hybrid Organizations."</a> <em>Voluntas</em>, 30(3), 535–548.</li>
+    <li id="ref-raisiene2017">Raišienė, A. G., &amp; Urmanavičienė, A. (2017). <a href="https://ojs.srce.hr/ekonomski-vjesnik/article/view/5012">"Mission Drift in a Hybrid Organization: How Can Social Business Combine its Dual Goals?"</a> <em>Ekonomski Vjesnik</em>, 30(2), 301–310. Open access.</li>
+    <li id="ref-cornforth2020">Cornforth, C. (2020). "The Governance of Hybrid Organisations." In Billis &amp; Rochester (eds.), <em>Handbook on Hybrid Organisations</em>. Edward Elgar. <a href="https://oro.open.ac.uk/69971/1/13-chapter%2013%20-%20final%20version.pdf">Open access</a>.</li>
+    <li id="ref-molderez2023">Molderez, I., &amp; Fets, J. (2023). <a href="https://onlinelibrary.wiley.com/doi/10.1111/basr.12316">"Dark sides of social entrepreneurship."</a> <em>Business and Society Review</em>, 128(4), 672–709. Documented harms and romanticized founder narratives.</li>
+    <li id="ref-addae2013">Addae, A. E. (2013). <a href="https://sp2.upenn.edu/wp-content/uploads/2014/07/socialimpactfellows_Addae.pdf">"Pathways to Sector Selection."</a> On the choice of legal form.</li>
+    <li id="ref-gacode">O.C.G.A. §§ 14-2-1801–1807 (Benefit Corporations). Definitions at § 14-2-1802; director duties and protection at <a href="https://law.justia.com/codes/georgia/title-14/chapter-2/article-18/section-14-2-1806/">§ 14-2-1806</a>. Enacted 2020, effective January 1, 2021.</li>
+  </ol>
+
+  <h3 class="refgroup">C · Creating shared value and its critics</h3>
+  <ol>
+    <li id="ref-porter2011">Porter, M. E., &amp; Kramer, M. R. (2011). <a href="https://www.hbs.edu/faculty/Pages/item.aspx?num=39071">"Creating Shared Value."</a> <em>Harvard Business Review</em>, 89(1–2), 62–77.</li>
+    <li id="ref-crane2014">Crane, A., Palazzo, G., Spence, L. J., &amp; Matten, D. (2014). <a href="https://journals.sagepub.com/doi/10.1525/cmr.2014.56.2.130">"Contesting the Value of 'Creating Shared Value.'"</a> <em>California Management Review</em>, 56(2), 130–153. The canonical rebuttal.</li>
+    <li id="ref-elkington2018">Elkington, J. (2018). <a href="https://hbr.org/2018/06/25-years-ago-i-coined-the-phrase-triple-bottom-line-heres-why-im-giving-up-on-it">"25 Years Ago I Coined the Phrase 'Triple Bottom Line.' Here's Why It's Time to Rethink It."</a> <em>Harvard Business Review</em> (online). The originator's recall.</li>
+  </ol>
+
+  <h3 class="refgroup">D · Business models and experimentation</h3>
+  <ol>
+    <li id="ref-wang2021">Wang, Z., &amp; Zhou, Y. (2021). <a href="https://www.emerald.com/md/article/59/11/2693/452121/Business-model-innovation-legitimacy-and">"Business model innovation, legitimacy and performance: social enterprises in China."</a> <em>Management Decision</em>, 59(11), 2693–2712.</li>
+    <li id="ref-koning2022">Koning, R., Hasan, S., &amp; Chatterji, A. (2022). "Experimentation and Start-up Performance: Evidence from A/B Testing." <em>Management Science</em>, 68(9), 6434–6453. <a href="https://www.hbs.edu/ris/Publication%20Files/AB_Testing_R_R_08b97538-ed3f-413e-bc38-c239b175d868.pdf">Working-paper PDF</a>.</li>
+    <li id="ref-semcow2018">Semcow, K., &amp; Morrison, J. K. (2018). <a href="https://www.emerald.com/sej/article/14/3/248/455394/Lean-Startup-for-social-impactRefining-the">"Lean Startup for social impact."</a> <em>Social Enterprise Journal</em>, 14(3), 248–267. I-Corps adapted for social ventures.</li>
+    <li id="ref-ssir2024mvb"><a href="https://ssir.org/articles/entry/cross-sector-collaborations-lean-startups">"Cross-Sector Initiatives Should Start Small."</a> <em>Stanford Social Innovation Review</em> (2024). Source of the minimum viable benefit.</li>
+    <li id="ref-aspect2021">Aspect Network (2021). <a href="http://aspect.ac.uk/wp-content/uploads/2021/05/2021_3_ASAPSocBusInnovation_Final-1.pdf">"Social Business Model Innovation."</a> Practitioner archetypes.</li>
+    <li id="ref-movingworlds">MovingWorlds. <a href="https://movingworlds.org/social-entrepreneurship-guide">Guide to growing and scaling a social enterprise.</a> Practitioner resource: systems and asset mapping.</li>
+  </ol>
+
+  <h3 class="refgroup">E · Evidence and development economics</h3>
+  <ol>
+    <li id="ref-poorecon2011">Banerjee, A., &amp; Duflo, E. (2011). <a href="https://www.hachettebookgroup.com/titles/abhijit-v-banerjee/poor-economics/9781541706194/?lens=publicaffairs"><em>Poor Economics</em></a>. PublicAffairs. Intervention-specific evidence over ideology.</li>
+    <li id="ref-nobel2019">Royal Swedish Academy of Sciences (2019). <a href="https://www.nobelprize.org/prizes/economic-sciences/2019/summary/">Prize in Economic Sciences to Banerjee, Duflo, and Kremer</a>, for the experimental approach to alleviating global poverty.</li>
+    <li id="ref-jpal">J-PAL. <a href="https://www.povertyactionlab.org/">Abdul Latif Jameel Poverty Action Lab.</a> Reports 2,300+ randomized evaluations in 100 countries (as of mid-2026).</li>
+    <li id="ref-jpalintro">J-PAL. <a href="https://www.povertyactionlab.org/resource/introduction-randomized-evaluations">"Introduction to Randomized Evaluations."</a> When RCTs are, and are not, the right tool.</li>
+    <li id="ref-bkz2015">Banerjee, A., Karlan, D., &amp; Zinman, J. (2015). <a href="https://www.aeaweb.org/articles?id=10.1257/app.20140287">"Six Randomized Evaluations of Microcredit: Introduction and Further Steps."</a> <em>AEJ: Applied Economics</em>, 7(1), 1–21. Modestly positive, not transformative. Free PDF at the link.</li>
+    <li id="ref-bdgk2015">Banerjee, A., Duflo, E., Glennerster, R., &amp; Kinnan, C. (2015). <a href="https://www.aeaweb.org/articles?id=10.1257/app.20130533">"The Miracle of Microfinance? Evidence from a Randomized Evaluation."</a> <em>AEJ: Applied Economics</em>, 7(1), 22–53. The Hyderabad trial.</li>
+    <li id="ref-haushofer2016">Haushofer, J., &amp; Shapiro, J. (2016). <a href="https://doi.org/10.1093/qje/qjw025">"The Short-term Impact of Unconditional Cash Transfers to the Poor: Experimental Evidence from Kenya."</a> <em>Quarterly Journal of Economics</em>, 131(4), 1973–2042. The cash benchmark.</li>
+    <li id="ref-mader2013">Mader, P. (2013). <a href="https://onlinelibrary.wiley.com/doi/10.1002/jsc.1921">"Rise and Fall of Microfinance in India: The Andhra Pradesh Crisis in Perspective."</a> <em>Strategic Change</em>, 22(1–2), 47–66.</li>
+    <li id="ref-cull2007">Cull, R., Demirgüç-Kunt, A., &amp; Morduch, J. (2007). <a href="https://doi.org/10.1111/j.1468-0297.2007.02017.x">"Financial Performance and Outreach: A Global Analysis of Leading Microbanks."</a> <em>Economic Journal</em>, 117(517), F107–F133. Commercial orientation and larger loans, cross-sectionally.</li>
+    <li id="ref-mersland2010">Mersland, R., &amp; Strøm, R. Ø. (2010). <a href="https://doi.org/10.1016/j.worlddev.2009.05.006">"Microfinance Mission Drift?"</a> <em>World Development</em>, 38(1), 28–36. No industry-wide drift over time; the counterweight. <a href="https://www.econstor.eu/bitstream/10419/323964/3/Mersland-et-al-Microfinance-Mission-Drift.pdf">Open access</a>.</li>
+    <li id="ref-rotz2015">Rotz, D., Maxwell, N., &amp; Dunn, A. (2015). <a href="https://mathematica.org/publications/economic-selfsufficiency-and-life-stability-one-year-after-starting-a-social-enterprise-job">"Economic Self-Sufficiency and Life Stability One Year After Starting a Social Enterprise Job."</a> Mathematica Policy Research, for REDF. Employment 18%→51%; $2.23 returned per dollar spent.</li>
+    <li id="ref-redf">REDF / Redefine Alliance. <a href="https://redefinealliance.org/history/">History.</a> Founded 1997 by George Roberts; the U.S. home of employment social enterprise; renamed 2026.</li>
+    <li id="ref-givewell">GiveWell. <a href="https://www.givewell.org/how-much-does-it-cost-to-save-a-life">"How much does it cost to save a life?"</a> and <a href="https://www.givewell.org/charities/top-charities">Top Charities</a>. Roughly $3,000–$5,500 per life saved (2022–2024 grants); formal benchmark adopted November 2025. Updated continually; read for the spread.</li>
+  </ol>
+
+  <h3 class="refgroup">F · Impact investing and measurement</h3>
+  <ol>
+    <li id="ref-ebrahim2014impact">Ebrahim, A., &amp; Rangan, V. K. (2014). <a href="https://journals.sagepub.com/doi/10.1525/cmr.2014.56.3.118">"What Impact? A Framework for Measuring the Scale and Scope of Social Performance."</a> <em>California Management Review</em>, 56(3), 118–141.</li>
+    <li id="ref-fivedim">Impact Frontiers. <a href="https://impactfrontiers.org/norms/five-dimensions-of-impact/">"The Five Dimensions of Impact."</a> What, who, how much, contribution, risk.</li>
+    <li id="ref-giincore">GIIN. <a href="https://thegiin.org/publication/post/core-characteristics-of-impact-investing/">"Core Characteristics of Impact Investing."</a> Intentionality, evidence, impact management, industry contribution.</li>
+    <li id="ref-giinsizing">GIIN (2024). <a href="https://thegiin.org/publication/research/sizing-the-impact-investing-market-2024/">Sizing the Impact Investing Market 2024.</a> $1.571T across 3,907 organizations, on a ~85% coverage assumption.</li>
+    <li id="ref-giinsotm2025">GIIN (2025). <a href="https://thegiin.org/publication/research/state-of-the-market-2025-trends-performance-and-allocations/">State of the Market 2025.</a> Impact-washing the leading challenge (62%, Fig. 30); 90% satisfied with own impact performance (Fig. 27); none rated own impact below peers (Fig. 29).</li>
+    <li id="ref-iris">GIIN. <a href="https://iris.thegiin.org/">IRIS+.</a> The standardized impact-metrics catalog.</li>
+    <li id="ref-ifc">IFC. <a href="https://www.impactprinciples.org/9-principles/">Operating Principles for Impact Management.</a> Nine principles across the investment lifecycle.</li>
+    <li id="ref-ieg">World Bank Independent Evaluation Group. <a href="https://ieg.worldbankgroup.org/evaluations/international-finance-corporation-additionality-middle-income-countries/overview-0">IFC Additionality in Middle-Income Countries.</a> Defines additionality.</li>
+    <li id="ref-bridges">Bridges Fund Management (2013, standalone edition 2015). <a href="https://www.bridgesfundmanagement.com/insight/bridges-spectrum-of-capital/">"The Spectrum of Capital."</a> From traditional investment to philanthropy.</li>
+    <li id="ref-bannick2017">Bannick, M., Goldman, P., Kubzansky, M., &amp; Saltuk, Y. (2017). <a href="https://ssir.org/articles/entry/across_the_returns_continuum">"Across the Returns Continuum."</a> <em>SSIR</em>, 15(1). The case for sub-commercial returns.</li>
+    <li id="ref-c3">Catalytic Capital Consortium (MacArthur, Rockefeller, Omidyar). <a href="https://catalyticcapitalconsortium.org/">catalyticcapitalconsortium.org.</a> Patient, risk-tolerant, concessionary, flexible capital that de-risks and mobilizes.</li>
+    <li id="ref-acumen">Acumen. <a href="https://acumen.org/patient-capital/">Patient Capital.</a> Definition and the 91-cents figure.</li>
+    <li id="ref-rockefeller">Rockefeller Foundation. <a href="https://www.rockefellerfoundation.org/bellagio-bulletin/from-the-archives/global-impact-investing-network-giin/">The 2007 Bellagio convening</a> that coined "impact investing" and incubated the GIIN (launched 2009).</li>
+    <li id="ref-svi">Social Value International. <a href="https://www.socialvalueint.org/principles">The Principles of Social Value (SROI).</a> Involve stakeholders; do not over-claim; verify.</li>
+    <li id="ref-nielsen2021">Nielsen, J. G., Lueg, R., &amp; van Liempd, D. (2021). <a href="https://doi.org/10.1002/nml.21439">"Challenges and boundaries in implementing social return on investment."</a> <em>Nonprofit Management and Leadership</em>, 31(3), 413–435. Why SROI is a disciplined narrative, not a score.</li>
+    <li id="ref-dced">DCED (2019). <a href="https://www.enterprise-development.org/wp-content/uploads/RM-Brief-Standard-GIIN-NIP.pdf">"The DCED Standard and GIIN's IRIS+."</a> Fit-for-purpose results measurement.</li>
+  </ol>
+
+  <h3 class="refgroup">G · Critical perspectives</h3>
+  <ol>
+    <li id="ref-deaton2018">Deaton, A., &amp; Cartwright, N. (2018). <a href="https://doi.org/10.1016/j.socscimed.2017.12.005">"Understanding and Misunderstanding Randomized Controlled Trials."</a> <em>Social Science &amp; Medicine</em>, 210, 2–21. Open access.</li>
+    <li id="ref-karnani2007a">Karnani, A. (2007). <a href="https://ssir.org/articles/entry/microfinance_misses_its_mark">"Microfinance Misses Its Mark."</a> <em>SSIR</em>. Jobs beat loans.</li>
+    <li id="ref-karnani2007b">Karnani, A. (2007). <a href="https://www.un.org/esa/coordination/Romanticizing.Poor.Oct07.pdf">"Romanticizing the Poor Harms the Poor."</a> Against the bottom-of-the-pyramid premise.</li>
+    <li id="ref-karnani2011">Karnani, A. (2011). <a href="https://direct.mit.edu/itgg/article-pdf/6/2/99/704803/inov_a_00072.pdf">"Social Entrepreneurship: Beyond the Hype."</a> <em>Innovations</em>, 6(2), 99–116. Against the heroic-founder narrative; the state's essential role.</li>
+    <li id="ref-prahalad2002">Prahalad, C. K., &amp; Hart, S. L. (2002). <a href="https://www.strategy-business.com/article/11518">"The Fortune at the Bottom of the Pyramid."</a> <em>strategy+business</em>, 26; expanded in Prahalad (2004), Wharton School Publishing. The thesis Karnani rebuts.</li>
+    <li id="ref-buchanan2013">Buchanan, P. (2013). <a href="https://nonprofitquarterly.org/buchanan-pallotta-s-tedtalk-rooted-in-fallacy-and-distortion/">"Pallotta's TED Talk: Rooted in Fallacy and Distortion."</a> <em>Nonprofit Quarterly</em>. The published rebuttal to the watch library's provocation.</li>
+  </ol>
+
+  <h3 class="refgroup">H · Practice and grantmaking</h3>
+  <ol>
+    <li id="ref-tbp">Trust-Based Philanthropy Project. <a href="https://www.trustbasedphilanthropy.org/">trustbasedphilanthropy.org.</a> The six practices.</li>
+    <li id="ref-goggins2009">Goggins Gregory, A., &amp; Howard, D. (2009). <a href="https://ssir.org/articles/entry/the_nonprofit_starvation_cycle">"The Nonprofit Starvation Cycle."</a> <em>SSIR</em>, 7(4). The mechanism behind flexible funding.</li>
+    <li id="ref-fordbuild">Ford Foundation. <a href="https://www.fordfoundation.org/learning/library/program-evaluations/build-evaluation-final-report/">BUILD independent evaluation (NIRAS), final report.</a> Flexible multi-year funding and organizational resilience.</li>
+    <li id="ref-ballmer">Ballmer Group. <a href="https://ballmergroup.org/five-years-later-renewing-our-commitment-to-large-scale-flexible-funding/">On large-scale flexible funding.</a> Practice at scale; less published evaluation.</li>
+    <li id="ref-debow2026">DeBow, K., Yeh, C., &amp; Carvajal, S. (2026). <a href="https://ssir.org/articles/entry/sustainable-grantmaking-benchmark">"Keeping Score on Sustainable Grantmaking."</a> <em>SSIR</em>.</li>
+    <li id="ref-sixtydb">60 Decibels. <a href="https://60decibels.com/">Lean Data beneficiary surveys.</a> Spun out of Acumen, 2019.</li>
+    <li id="ref-listen4good">Listen4Good (Fund for Shared Insight). <a href="https://listen4good.org/">Client feedback loops for nonprofits.</a></li>
+    <li id="ref-pallotta2013">Pallotta, D. (2013). <a href="https://www.ted.com/talks/dan_pallotta_the_way_we_think_about_charity_is_dead_wrong">"The way we think about charity is dead wrong."</a> TED2013. Watch alongside Buchanan's rebuttal (group G).</li>
+  </ol>
+
+  <h3 class="refgroup">I · Epiphany, local cases, and Georgia</h3>
+  <ol>
+    <li>First Presbyterian Church of Atlanta. <a href="https://www.firstpresatl.org/epiphany">Epiphany.</a> The program, the five criteria, volunteer roles, $455,000 granted to date.</li>
+    <li>First Presbyterian Church of Atlanta. <a href="https://www.firstpresatl.org/epiphany-alumni">Epiphany Alumni.</a> Twelve alumni ventures.</li>
+    <li id="ref-focalpoint"><em>Focal Point</em> (2019). <a href="https://www.focalpoint.firstpresatl.org/2019/community-in-every-cup">"Community In Every Cup."</a> The Refuge Coffee story, and the grant that jump-started its fundraising.</li>
+    <li>Presbyterian Church (U.S.A.) (2019). <a href="https://pcusa.org/news-storytelling/news/2019/12/27/epiphany-project-reveals-community-needs">"Epiphany Project reveals community needs."</a> The program's origin: 88 applications, 22 finalists, five ventures funded.</li>
+    <li>GPB (2020). <a href="https://www.gpb.org/news/2020/01/10/atlantas-first-presbyterian-church-creates-shark-tank-for-community-focused">"Atlanta's First Presbyterian Church Creates 'Shark Tank' for Community-Focused Business."</a></li>
+    <li>AJC (2022). <a href="https://www.ajc.com/news/atlanta-church-nurtures-socially-conscious-based-ventures/UXNSC3COTRHKXHEKJWZJO5YGOU/">"Atlanta church nurtures socially-conscious based ventures."</a></li>
+    <li>Refuge Coffee Co. <a href="https://www.refugecoffeeco.com/">Official site</a> and <a href="https://www.refugecoffeeco.com/refuge-job-training/">job training</a>. Mission, the 55-baristas figure, locations.</li>
+    <li>PBS / <em>Secret Atlanta</em> (2017). <a href="https://www.pbs.org/video/secret-atlanta-refuge-coffee-company/">"Refuge Coffee Company"</a> (3:58).</li>
+    <li>Goodr. <a href="https://goodr.co/our-story/">Our Story.</a> Founded 2017 by Jasmine Crowe-Houston.</li>
+    <li>TED (2024). <a href="https://www.ted.com/talks/jasmine_crowe_houston_the_delicious_potential_of_rescuing_wasted_food">Jasmine Crowe-Houston, "The delicious potential of rescuing wasted food."</a> TEDNext.</li>
+    <li>Start:ME Atlanta (Emory Goizueta Business School). <a href="https://www.startmeatl.org/">startmeatl.org.</a></li>
+    <li>Georgia Social Impact Collaborative. <a href="https://gasocialimpact.com/">gasocialimpact.com</a>, incl. the <a href="https://gasocialimpact.com/faith-based-impact-investing-starter-kit/">Faith-Based Impact Investing Starter Kit</a>.</li>
+    <li>CASE at Duke. <a href="https://case.fuqua.duke.edu/knowledge_items/impact-explained-a-framework-to-drive-impact/">"Impact Explained"</a> and <a href="https://case.fuqua.duke.edu/knowledge_items/5-dimensions-of-impact-video/">"5 Dimensions of Impact."</a> Short explainers.</li>
+  </ol>
+</section>
+
+<footer>
+  <p>The Epiphany Guide to Social Enterprise · Epiphany Program, First Presbyterian Church of Atlanta · Updated July 2026.<br>
+  Citations in the text link to the reference list; dotted-underlined terms show glossary definitions on hover. Questions, corrections, and better local cases are welcome; this guide improves the way the program does, by review.</p>
+</footer>
+
+</main>
+</div>
+
+<script>
+// Open all appendix sections when printing, restore after.
+let openedForPrint = [];
+window.addEventListener('beforeprint', () => {
+  openedForPrint = [];
+  document.querySelectorAll('details:not([open])').forEach(d => { d.open = true; openedForPrint.push(d); });
+});
+window.addEventListener('afterprint', () => {
+  openedForPrint.forEach(d => d.open = false);
+  openedForPrint = [];
+});
+</script>
+</body>
+</html>
